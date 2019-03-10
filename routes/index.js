@@ -12,6 +12,13 @@ router.get('/index.html', function (req, res) {
 router.get('/student5?', function (req, res) {
     req.session.user ? res.redirect('/student5.html') : false;
 });
+router.post('/staff', function (req, res) {
+  res.redirect('/staff.html');
+});
+router.post('/admin', function (req, res) {
+    res.redirect('/dashboard.html');
+  });
+  
 router.get('/insert', function (req, res) {
     res.render('insert', { title: "insert" });
 });
