@@ -9,19 +9,15 @@ const nodemailer = require("nodemailer");
 router.get('/index.html', function (req, res) {
     res.render('index', { title: "home" });
 });
-router.get('/student5?', function (req, res) {
-    req.session.user ? res.redirect('/student5.html') : false;
-});
-router.post('/staff', function (req, res) {
-  res.redirect('/staff.html');
-});
+
 router.post('/admin', function (req, res) {
-    res.redirect('/dashboard.html');
+    
   });
   
 router.get('/insert', function (req, res) {
     res.render('insert', { title: "insert" });
 });
+
 router.get('/chat', function (req, res) {
     res.render('admin/chat', { title: "ChatApp" });
 });
@@ -110,6 +106,7 @@ router.post('/delete', function (req, res, next) {
         });
     });
 });
+
 router.post('/add_staff', function (req, res, next) {
     insert_data(url,'ama','staff',req.body);
     res.redirect("student5.html")
@@ -145,17 +142,10 @@ router.get('/logout', function (req, res, next) {
     res.redirect('/');
 });
 
-
-
-var noti = [
-    {
-        header: "heading1",
-        content: "bla bla bla"
-    }
-];
 router.get('/notification', function (req, res, next) {
     res.send(get_data(url, 'ama', 'noti'));
 });
+
 router.post('/notification', function (req, res, next) {
     var notification_data = {
         header: req.body.header,

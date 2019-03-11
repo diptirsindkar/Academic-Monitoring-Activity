@@ -14,8 +14,8 @@ router.get('/login', function (req, res, next) {
 });
 
 
-router.get('/', function (req, res, next) {
-    res.render('admin/admin', { title: "dashboard" }); 
+router.get('/admin_login', function (req, res, next) {
+  res.redirect('/dashboard.html');
 });
 router.get('/dir', function (req, res, next) {
   res.render('admin/directory', { title: "dir" });
