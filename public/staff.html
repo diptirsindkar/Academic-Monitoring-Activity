@@ -1,234 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Staff</title>
-    <link rel="icon" href="img/teacher.png" />
-    <meta name="viewport" content="max-width=device-width, intial-scale=1"/>
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
-    
-    
-     <!-- Libraries CSS Files -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/venobox/venobox.css" rel="stylesheet">
 
-    
+<head>
+  <meta charset="utf-8">
+  <title>Staff</title>
+  <link rel="icon" href="img/teacher.png" />
+  <meta name="viewport" content="max-width=device-width, intial-scale=1" />
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900"
+    rel="stylesheet">
+
+
+  <!-- Libraries CSS Files -->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/venobox/venobox.css" rel="stylesheet">
+
+
   <!-- Responsive Stylesheet File -->
   <link href="css/responsive.css" rel="stylesheet">
   <link href="css/datepicker.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
-  <link rel="stylesheet" href="css/staff.css" type="text/css"/>
-    
-    <!----------date-picker--------------->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"  type="text/css">
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/staff.css" type="text/css" />
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <!----------date-picker--------------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"
+    type="text/css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="css/pe-icon-7-stroke.css" rel="stylesheet" />
+  <link href="css/pe-icon-7-stroke.css" rel="stylesheet" />
 
 
-       <style type="text/css">
-       	.cancel:hover{
-       		background-color: red !important;
-       		border: 0;
-       	}
-       </style>
+  <style type="text/css">
+    .cancel:hover {
+      background-color: red !important;
+      border: 0;
+    }
+  </style>
 </head>
-    
-    <body>
-        <!-------------------sidebar-------------------------->
-        <div class="wrapper">
-        <div class="sidebar">
-        <ul class="nav nav-tabs"> 
-        <div class="hstudent"><a href="#student" data-toggle="tab"><p>staff</p></a></div>
-  <li class="active li"><a data-toggle="tab" href="#dashboard"><i class="pe-7s-graph" style="font-size:28px"></i>Home</a></li>
-  <li class="li"><a data-toggle="tab" href="#Addstu"><i class="pe-7s-server" style="font-size:28px"></i>Add Student</a></li>
-  <li class="li"><a data-toggle="tab" href="#Sturep"><i class="pe-7s-file"   style="font-size:28px"></i>Student Report</a></li>
-  <li class="li"><a data-toggle="tab" href="#timetable"><i class="pe-7s-date" style='font-size:28px;color:white'></i>Time-table</a></li>
-  <li class="li"><a data-toggle="tab" href="#Leave"><i class="pe-7s-note" style='font-size:28px;color:white'></i>Leave</a></li>
-  <li class="li"><a data-toggle="tab" href="#Complain"><i class="pe-7s-mail-open-file" style='font-size:28px;color:white'></i>Complain</a></li>
-    </ul>
-        </div>
-    
-    
-        <!----------------------------main nav------------------------->
-        <div class="main-panel">
-        <nav class="navbar navbar-default navbar-fixed content2">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-             <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>                        
-              </button>
-              <a class="navbar-brand" href="#"><img src="img/ama-logo.png" class="img-responsive" alt="logo"/></a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="nav navbar-nav">
-                <li><a href="#"><i class="fa fa-dashboard" style="font-size:19px"></i></a></li>
-                <li><a href="#"><i class="fa fa-globe" style="font-size:19px"></i></a></li>
-                <li><a href="#"><i class="fa fa-search" style="font-size:19px"></i></a></li>
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"> Account</a></li>
-                <li><a href="#">Logout</a></li>
-              </ul>
-            </div>
+
+<body>
+  <!-------------------sidebar-------------------------->
+  <div class="wrapper">
+    <div class="sidebar">
+      <ul class="nav nav-tabs">
+        <div class="hstudent"><a href="#student" data-toggle="tab">
+            <p>staff</p>
+          </a></div>
+        <li class="active li"><a data-toggle="tab" href="#dashboard"><i class="pe-7s-graph"
+              style="font-size:28px"></i>Home</a></li>
+        <li class="li"><a data-toggle="tab" href="#Addstu"><i class="pe-7s-server" style="font-size:28px"></i>Add
+            Student</a></li>
+        <li class="li"><a data-toggle="tab" href="#Sturep"><i class="pe-7s-file" style="font-size:28px"></i>Student
+            Report</a></li>
+        <li class="li"><a data-toggle="tab" href="#timetable"><i class="pe-7s-date"
+              style='font-size:28px;color:white'></i>Time-table</a></li>
+        <li class="li"><a data-toggle="tab" href="#Leave"><i class="pe-7s-note"
+              style='font-size:28px;color:white'></i>Leave</a></li>
+        <li class="li"><a data-toggle="tab" href="#Complain"><i class="pe-7s-mail-open-file"
+              style='font-size:28px;color:white'></i>Complain</a></li>
+      </ul>
+    </div>
+
+
+    <!----------------------------main nav------------------------->
+    <div class="main-panel">
+      <nav class="navbar navbar-default navbar-fixed content2">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="img/ama-logo.png" class="img-responsive" alt="logo" /></a>
           </div>
-        </nav>
-          
-        <!---------------------home content------------------------------>
-        <div class="content">
-        
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="#"><i class="fa fa-dashboard" style="font-size:19px"></i></a></li>
+              <li><a href="#"><i class="fa fa-globe" style="font-size:19px"></i></a></li>
+              <li><a href="#"><i class="fa fa-search" style="font-size:19px"></i></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"> Account</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!---------------------home content------------------------------>
+      <div class="content">
+
         <div class="row">
-        <div class="tab-content" >
-        <div id="dashboard" class="tab-pane fade in active">
-         <!--------------------graph-------------------------------->
-           <div class="content2">
-            <div class="row">
-           <div class="col-sm-6">
-               <div class="content3">
-                   <p class="content4">Leave & Complain Status</p>
-                   <p class="ftext">24 hours performance</p>
-              <p>AVERAGE</p>
-<div class="container1">
-  <div class="skills html">90%</div>
-</div>
+          <div class="tab-content">
+            <div id="dashboard" class="tab-pane fade in active">
+              <!--------------------graph-------------------------------->
+              <div class="content2">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="content3">
+                      <p class="content4">Leave & Complain Status</p>
+                      <p class="ftext">24 hours performance</p>
+                      <p>AVERAGE</p>
+                      <div class="container1">
+                        <div class="skills html">90%</div>
+                      </div>
 
-<p class="average">LEAVE</p>
-<div class="container1">
-  <div class="skills css">80%</div>
-</div>
+                      <p class="average">LEAVE</p>
+                      <div class="container1">
+                        <div class="skills css">80%</div>
+                      </div>
 
-<p class="average">COMPLAIN</p>
-<div class="container1">
-  <div class="skills js">65%</div>
-</div>
+                      <p class="average">COMPLAIN</p>
+                      <div class="container1">
+                        <div class="skills js">65%</div>
+                      </div>
 
- <p class="updated"><i class='far fa-clock' style='font-size:14px'></i>updated 3 minutes ago</p>
-            </div>
-            </div>
-      <!-------------------collapsie--------------------------->          
-                <div class="col-sm-6">
-                       <div class="news">
-                           <p class="content4">News and Events</p>
-                           <p class="ftext">24 hours performance</p>
-          <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">NEWS 1</a>
-            </h4>
-          </div>
-          <div id="collapse1" class="panel-collapse collapse in">
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">NEWS 2</a>
-            </h4>
-          </div>
-          <div id="collapse2" class="panel-collapse collapse">
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-          </div>
-        </div>
-         <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">NEWS 3</a>
-              </h4>
-            </div>
-            <div id="collapse3" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-            </div>
-          </div>
-          
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">NEWS 4</a>
-            </h4>
-          </div>
-          <div id="collapse4" class="panel-collapse collapse">
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-          </div>
-        </div>
-      </div> 
-                
-                        <div class="tickbox">   
-                <input type="checkbox" name="vehicle1" value="Bike">
-                Sign contract for "What are conference organizers afraid of?
-               <!-- <div class="td-actions text-right">-->
-                <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs" style="margin-left: 40px">
-                <i class="fa fa-edit"></i>
-                </button>
-                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                <i class="fa fa-times"></i>
-                            </button>
-                           </div>
-                           
-                <div class="tickbox">
-                <input type="checkbox" name="vehicle1" value="Bike">
-                Sign contract for "What are conference organizers afraid of?
-               <!-- <div class="td-actions text-right">-->
-                <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs" style="margin-left: 40px">
-                <i class="fa fa-edit"></i>
-                </button>
-                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                <i class="fa fa-times"></i>
-                </button>
+                      <p class="updated"><i class='far fa-clock' style='font-size:14px'></i>updated 3 minutes ago</p>
+                    </div>
+                  </div>
+                  <!-------------------collapsie--------------------------->
+                  <div class="col-sm-6">
+                    <div class="news">
+                      <p class="content4">News and Events</p>
+                      <p class="ftext">24 hours performance</p>
+                      <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">NEWS 1</a>
+                            </h4>
+                          </div>
+                          <div id="collapse1" class="panel-collapse collapse in">
+                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                              veniam,
+                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                          </div>
+                        </div>
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">NEWS 2</a>
+                            </h4>
+                          </div>
+                          <div id="collapse2" class="panel-collapse collapse">
+                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                              veniam,
+                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                          </div>
+                        </div>
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">NEWS 3</a>
+                            </h4>
+                          </div>
+                          <div id="collapse3" class="panel-collapse collapse">
+                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                              veniam,
+                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                          </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">NEWS 4</a>
+                            </h4>
+                          </div>
+                          <div id="collapse4" class="panel-collapse collapse">
+                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                              veniam,
+                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="tickbox">
+                        <input type="checkbox" name="vehicle1" value="Bike">
+                        Sign contract for "What are conference organizers afraid of?
+                        <!-- <div class="td-actions text-right">-->
+                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs"
+                          style="margin-left: 40px">
+                          <i class="fa fa-edit"></i>
+                        </button>
+                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                          <i class="fa fa-times"></i>
+                        </button>
+                      </div>
+
+                      <div class="tickbox">
+                        <input type="checkbox" name="vehicle1" value="Bike">
+                        Sign contract for "What are conference organizers afraid of?
+                        <!-- <div class="td-actions text-right">-->
+                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs"
+                          style="margin-left: 40px">
+                          <i class="fa fa-edit"></i>
+                        </button>
+                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                          <i class="fa fa-times"></i>
+                        </button>
+                      </div>
+
+                      <div class="tickbox">
+                        <input type="checkbox" name="vehicle1" value="Bike">
+                        Sign contract for "What are conference organizers afraid of?
+                        <!-- <div class="td-actions text-right">-->
+                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs"
+                          style="margin-left: 40px">
+                          <i class="fa fa-edit"></i>
+                        </button>
+                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                          <i class="fa fa-times"></i>
+                        </button>
+                      </div>
+
+
+                      <p class="updated"><i class='far fa-clock' style='font-size:14px'></i>updated 3 minutes ago</p>
+
+                    </div>
+
+                  </div>
+
                 </div>
-                  
-                <div class="tickbox">
-                <input type="checkbox" name="vehicle1" value="Bike">
-                Sign contract for "What are conference organizers afraid of?
-                <!-- <div class="td-actions text-right">-->
-                <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs" style="margin-left: 40px">
-                <i class="fa fa-edit"></i>
-                </button>
-                <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                <i class="fa fa-times"></i>
-                </button>
-                </div>
-
-           
-               <p class="updated"><i class='far fa-clock' style='font-size:14px'></i>updated 3 minutes ago</p>
-             
-            </div>   
-                
-            </div>      
-                
-            </div>
-            </div>
+              </div>
             </div>
             <!-----------------------chatbox-------------------------------->
-    
-    <button class="open-button" onclick="openForm()" ><i class='fas fa-circle' style='font-size:8px;color: #02c902'></i><br><i class="fas fa-comment-alt" style="font-size: 28px;color: white"></i>
-<br></button>
 
-<div class="chat-popup" id="myForm">
-  <form action="/action_page.php" class="form-container" style="position: relative;">
-    <h1 style="display: inline-block;">Chat</h1>
+            <button class="open-button" onclick="openForm()"><i class='fas fa-circle'
+                style='font-size:8px;color: #02c902'></i><br><i class="fas fa-comment-alt"
+                style="font-size: 28px;color: white"></i>
+              <br></button>
 
-    <label for="msg"><b>Message</b></label>
-    <textarea placeholder="Type message.." name="msg" required></textarea>
+            <div class="chat-popup" id="myForm">
+              <form action="/action_page.php" class="form-container" style="position: relative;">
+                <h1 style="display: inline-block;">Chat</h1>
 
-    <button type="submit" class="btn">Send<i class="fa fa-send" style="font-size:15px;"></i></button>
-    <button type="button" class="btn cancel" onclick="closeForm()" style="position: absolute;display: inline-block;
+                <label for="msg"><b>Message</b></label>
+                <textarea placeholder="Type message.." name="msg" required></textarea>
+
+                <button type="submit" class="btn">Send<i class="fa fa-send" style="font-size:15px;"></i></button>
+                <button type="button" class="btn cancel" onclick="closeForm()" style="position: absolute;display: inline-block;
     background-color: #ffffff;
     color: black;
     height: 21px;
@@ -241,855 +263,884 @@
     margin-left: 0px;
     padding: 0px;
     border-radius: 0px;">&times;</button>
-  </form>
-</div>
+              </form>
+            </div>
 
-<script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
+            <script>
+              function openForm() {
+                document.getElementById("myForm").style.display = "block";
+              }
 
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-</script>
-    
-   <!-------------------PROFILE content----------------------------------------------->  
+              function closeForm() {
+                document.getElementById("myForm").style.display = "none";
+              }
+            </script>
+
+            <!-------------------PROFILE content----------------------------------------------->
             <div id="student" class="tab-pane fade">
-             <div class="content2">
-                 <div class="row">
-                     
-           <div class="col-sm-8">
-              <div class="abc1"> 
-            <p class="content4">Edit Profile</p> 
-              <form>
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label>database-id (disabled)</label>
-                                                <input type="text" class="form-control form_c" disabled placeholder="Company" value="IDBCOE11">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>staff-id</label>
-                                                <input type="text" class="form-control form_c" disabled placeholder="Username" value="IDIETES11">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" class="form-control form_c" placeholder="Email">
-                                            </div>
-                                        </div>
-                                    </div>
+              <div class="content2">
+                <div class="row">
 
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>First Name</label>
-                                                <input type="text" class="form-control form_c" placeholder="Company" value="Mike">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>middle Name</label>
-                                                <input type="text" class="form-control form_c" placeholder="Last Name" value="Andrew">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>last Name</label>
-                                                <input type="text" class="form-control form_c" placeholder="Company" value="Mike">
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>mother Name</label>
-                                                <input type="text" class="form-control form_c" placeholder="Company" value="Mikeee">
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
+                  <div class="col-sm-8">
+                    <div class="abc1">
+                      <p class="content4">Edit Profile</p>
+                      <form>
+                        <div class="row">
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label>staff-id</label>
+                              <input type="text" class="form-control form_c" disabled placeholder="Username">
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Email address</label>
+                              <input type="email" class="form-control form_c" placeholder="Email">
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label>password</label>
+                              <input type="password" class="form-control form_c" placeholder="*******">
+                            </div>
+                          </div>
+                        </div>
 
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Address</label>
-                                                <input type="text" class="form-control form_c" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="row">
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label>First Name</label>
+                              <input type="text" class="form-control form_c" placeholder="Type your first name">
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label>middle Name</label>
+                              <input type="text" class="form-control form_c" placeholder="Type your mast Name">
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label>Last Name</label>
+                              <input type="text" class="form-control form_c" placeholder="Type your last name">
+                            </div>
+                          </div>
 
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>City</label>
-                                                <input type="text" class="form-control form_c" placeholder="City" value="Navi Mumbai">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>contact no.</label>
-                                                <input type="text" class="form-control form_c" placeholder="number">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>department</label>
-                                                <input type="text" class="form-control form_c" placeholder="computer">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>password</label>
-                                                <input type="password" class="form-control form_c" placeholder="*******">
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="col-md-4">
-                                            <div class="cpassword">
-                                                    <a href="" class="trigger" data-modal="name">change password</a> 
-                                            </div>
-                                       </div>
-                                       <div class="box1" id="name">
-                                            <div class="sandbox"></div>
-                                            <div class="box">
-                                              <div class="body">
-                                                <!--<div class="close">&#10006;</div> -->
-                                                <h5 >Change Your Password</h5>
-                                                <hr>
-                                                    <form>
-                                                            <div class="form-group">
-                                                                <input type="text" id="username" class="inputbox" name="login" placeholder="Old password">
-                                                            </div>
-                                                            
-                                                            <div class="form-group">
-                                                                <input type="text" id="password" class="inputbox" name="login" placeholder=" New Password">
-                                                            </div>
-                                                            
-                                                            <div class="form-group">
-                                                                <input type="text" id="password" class="inputbox" name="login" placeholder=" Confirm Password">
-                                                            </div>
-                                                            
-                                                            
-                                                               <div class="form-group"> <input type="submit" value="update password" class="btn1"></div>
-                                                            </form>
-                                                       
-                                                <button class="modal">Close!</button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          
-                                    
-                                    </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label>Mother's Name</label>
+                              <input type="text" class="form-control form_c" placeholder="Type your mother's name">
+                            </div>
+                          </div>
 
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>About Me</label>
-                                                <textarea rows="5" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
-                                            </div>
-                                        </div>
-                                    </div>
+                        </div>
 
-                                    <button type="submit" class="btn  btn-fill pull-right">Update Profile</button>
-                                    <div class="clearfix"></div>
-                               </form>
-                          </div> 
-                     </div>
-                            
-                            
-                   
-                    <div class="col-md-4">
-                        <div class="card5">                  
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <label>Address</label>
+                              <input type="text" class="form-control form_c" placeholder="Type your address here">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label>City</label>
+                              <input type="text" class="form-control form_c" placeholder="City">
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label>Contact Numbar</label>
+                              <input type="text" class="form-control form_c" placeholder="contact number">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label>Department</label>
+                              <input type="text" class="form-control form_c" placeholder="Department">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="cpassword">
+                              <a href="" class="trigger" data-modal="name">change password</a>
+                            </div>
+                          </div>
+                          <div class="box1" id="name">
+                            <div class="sandbox"></div>
+                            <div class="box">
+                              <div class="body">
+                                <h5>Change Your Password</h5>
+                                <hr>
+                                <div class="form-group">
+                                  <input type="text" id="username" class="inputbox" name="login"
+                                    placeholder="Old password">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" id="password" class="inputbox" name="login"
+                                    placeholder=" New Password">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" id="password" class="inputbox" name="login"
+                                    placeholder=" Confirm Password">
+                                </div>
+                                <div class="form-group"> <input type="submit" value="update password" class="btn1">
+                                </div>
+                                <button class="modal">Close!</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <label>About Me</label>
+                              <textarea rows="5" class="form-control" placeholder="Here can be your description"
+                                value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button type="submit" class="btn  btn-fill pull-right">Update Profile</button>
+                        <div class="clearfix"></div>
+                      </form>
+                    </div>
+                  </div>
+
+
+
+                  <div class="col-md-4">
+                    <div class="card5">
                       <img src="img/1200345bdcd463d7b58400.jpg" alt="building" class="img-responsive">
                       <form action="/upload_image" method="post">
-                       <div class="bg-img">
-                           <img src="img/avtar.jpg" class="img-responsive center" alt="avtar">
+                        <div class="bg-img">
+                          <img src="img/avtar.jpg" class="img-responsive center" alt="avtar">
                           <div class="file">
-                          <label class="btn-bs-file btn btn-lg btn-default">
-                          <i class="fa fa-camera" style='font-size:20px'></i>
-                          <input type="file" />
-                          </label>
+                            <label class="btn-bs-file btn btn-lg btn-default">
+                              <i class="fa fa-camera" style='font-size:20px'></i>
+                              <input type="file" />
+                            </label>
                           </div>
-                       </div>  
-                     </form>
-                          <h2 style="text-align: center">Jhon Deo</h2>
-                           <p style="font-size:16.5px;color:#9A9A9A;text-align: center">Jhondeo24 </p>
-                     <p style="text-align:center;font-size:14px;padding-bottom: 50px">"Lamborghini Mercy<br> Your chick she so thirsty<br> I'm in that two seat Lambo"</p>
-                     <div class="container-fluid icons">
-                         <div class="border"></div>
-                       <i class="fa fa-facebook-square" style="font-size:15px;padding:10px;color:#9A9A9A"></i>
-                       <i class="fa fa-google-plus-circle" style="font-size:15px;padding:10px;color:#9A9A9A"></i>
-                       <i class="fa fa-twitter" style="font-size:15px;padding:10px;color:#9A9A9A"></i>   
-                            </div>
-                     
-                     
-                     
-                     
-                     
-                     </div>
-                     </div>  
-                     
-                     
-                       
-                 </div>    
-             </div>
-            </div>
-            
-            <!--------------------------------Add Student-------------------------->
-             <div id="Addstu" class="tab-pane fade">
-             <div class="content2">
-                 <div class="col-sm-12" id="form1">
-                 <div class="abc1">
-                     <p class="content4">Add Student</p>
-                     <form>
-                  <div class="row">
-                      <div class="col-md-12">
-                          <div class="form-group">
-              
-                    <div class="sel"> <label style="margin-left:15px">Select Standard:</label>
-        <select required style="margin-right:10px">
-  <option class="opt" value="select">Select</option>
-  <option class="opt" value="1st">1st </option>
-  <option class="opt" value="2nd">2nd </option>
-  <option class="opt" value="3rd">3rd </option>
-  <option class="opt" value="4th">4th </option>            
-</select>
-                     <label style="margin-left:15px">Select Branch:</label>
-       <select required style="margin-right:10px">
-  <option class="opt" value="select">Select</option>
-  <option class="opt" value="Comp">Computer </option>
-  <option class="opt" value="Mech">Mechanical </option>
-  <option class="opt" value="Extc">Electrical</option>
-  <option class="opt" value="Etrx">Electronic</option>            
-</select>
-                              </div>   
-                              <a style="background-color:#ffcc80; color: white;" class="btn  btn-fill pull-right" id="show">Select</a>
-                     </div>
-                 
-                 </div>
-                 </div>
-                     </form>
-                     
-                     </div>
-                 </div>
-                 <div class="col-sm-8" id="form">
-                        <div class="abc1"> 
-                      <p class="content4">Edit Profile</p> 
-                        <form>
-                                              <div class="row">
-                                                  <div class="col-md-5">
-                                                      <div class="form-group">
-                                                          <label>database-id</label>
-                                                          <input type="text" class="form-control form_c" placeholder="Company" value="IDBCOE11" required>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col-md-3">
-                                                      <div class="form-group">
-                                                          <label>student-id</label>
-                                                          <input type="text" class="form-control form_c"  placeholder="Username" value="IDIETES11" required>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col-md-4">
-                                                      <div class="form-group">
-                                                          <label for="exampleInputEmail1">Email address</label>
-                                                          <input type="email" class="form-control form_c" placeholder="Email">
-                                                      </div>
-                                                  </div>
-                                              </div>
-          
-                                              <div class="row">
-                                                  <div class="col-md-3">
-                                                      <div class="form-group">
-                                                          <label>First Name</label>
-                                                          <input type="text" class="form-control form_c" placeholder="Company" value="Mike" required>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col-md-3">
-                                                      <div class="form-group">
-                                                          <label>middle Name</label>
-                                                          <input type="text" class="form-control form_c" placeholder="Last Name" value="Andrew" required>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col-md-3">
-                                                      <div class="form-group">
-                                                          <label>last Name</label>
-                                                          <input type="text" class="form-control form_c" placeholder="Company" value="Mike" required>
-                                                      </div>
-                                                  </div>
-                                                  
-                                                  <div class="col-md-3">
-                                                      <div class="form-group">
-                                                          <label>mother Name</label>
-                                                          <input type="text" class="form-control form_c" placeholder="Company" value="Mikeee" required>
-                                                      </div>
-                                                  </div>
-                                                  
-                                              </div>
-          
-                                              <div class="row">
-                                                  <div class="col-md-12">
-                                                      <div class="form-group">
-                                                          <label>Address</label>
-                                                          <input type="text" class="form-control form_c" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">
-                                                      </div>
-                                                  </div>
-                                              </div>
-          
-                                              <div class="row">
-                                                  <div class="col-md-4">
-                                                      <div class="form-group">
-                                                          <label>City</label>
-                                                          <input type="text" class="form-control form_c" placeholder="City" value="Navi Mumbai">
-                                                      </div>
-                                                  </div>
-                                                  <div class="col-md-4">
-                                                      <div class="form-group">
-                                                          <label>contact no.</label>
-                                                          <input type="text" class="form-control form_c" placeholder="number">
-                                                      </div>
-                                                  </div>
-                                                  <div class="col-md-4">
-                                                      <div class="form-group">
-                                                          <label>department</label>
-                                                          <input type="text" class="form-control form_c" placeholder="computer" required>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col-md-4">
-                                                      <div class="form-group">
-                                                          <label>password</label>
-                                                          <input type="password" class="form-control form_c" placeholder="*******" required>
-                                                      </div>
-                                                  </div>                                           
-                                              </div>
-          
-                                              
-                                              <button type="submit" class="btn  btn-fill pull-right">Add Student</button>
-                                              <div class="clearfix"></div>
-                                         </form>
-                                    </div> 
-                               </div>
-                 </div>
-            </div>
-    <!---------------------------student report------------------------------------->
-    <div id="Sturep" class="tab-pane fade">
-        <div class="content2">
-            <div class="col-sm-12" id="form2">
-                <div class="abc1">
-                    <p class="content4">Student Report</p>
-                    <form>
-                 <div class="row">
-                     <div class="col-sm-12">
-                         <div class="form-group">
-             
-                   <div class="sel"> 
-                    <label style="margin-left:10px">Branch:</label>
-      <select required style="margin-right:10px"> 
- <option class="opt" value="select">Select</option>
- <option class="opt" value="Comp">Computer </option>
- <option class="opt" value="Mech">Mechanical </option>
- <option class="opt" value="Extc">Electrical</option>
- <option class="opt" value="Etrx">Electronic</option>            
-</select>
-<label style="margin-left:10px">Sem:</label>
-       <select required style="margin-right:10px">
- <option class="opt" value="select">Select</option>
- <option class="opt" value="1st">1st </option>
- <option class="opt" value="2nd">2nd </option>
- <option class="opt" value="3rd">3rd </option>
- <option class="opt" value="4th">4th </option>            
- <option class="opt" value="5th">5th </option>            
- <option class="opt" value="6th">6th </option>            
- <option class="opt" value="7th">7th </option>            
- <option class="opt" value="8th">8th </option>            
-</select>
-<label style="margin-left:10px">Division:</label>
-       <select required style="margin-right:10px">
- <option class="opt" value="select">Select</option>
- <option class="opt" value="A">A</option>
- <option class="opt" value="B">B</option>
-</select>
-<label style="margin-left:10px">Month:</label>
-       <select required style="margin-right:10px">
- <option class="opt" value="select">Select</option>
- <option class="opt" value="jan">january</option>
- <option class="opt" value="feb">february </option>
- <option class="opt" value="mar">march</option>
- <option class="opt" value="apr">april</option>            
- <option class="opt" value="may">may</option>            
- <option class="opt" value="jun">june </option>            
- <option class="opt" value="jul">july </option>            
- <option class="opt" value="aug">august </option>            
- <option class="opt" value="sep">september</option>            
- <option class="opt" value="oct">october </option>            
- <option class="opt" value="nov">november</option>            
- <option class="opt" value="dec">december</option>            
-</select>
-                             </div>   
-                             <button type="button" class="btn  btn-fill pull-right" id="show2">Select</button>
-                    </div>
-                </div>
-                </div>
-                    </form>
-                    </div>
-                </div>
-                <div class="col-sm-12" id="form3" style="display:none">
-                    <div class="abc1">
-                            <div class="row">  
-                                    <div class="col-sm-10">
-                                      <p class="content4">Student Report</p>
-                                    </div>
-                                  
-                                    <div class="col-sm-2">
-                                      <div class="form-group">
-                                         <button style="font-size:14px;width: 100%;margin-left: 2px;" >Send<i class="fa fa-send" style="font-size: 16px"></i></button>
-                                      </div>
-                                      </div>
-                                </div>
-                             <div >
-                                    <table class="table table-striped">
-                                            <thead>
-                                              <tr>
-                                                <th>Student Name</th>
-                                                <th>Unit Test 1</th>
-                                                <th>Unit Test 2</th>
-                                                <th>working days</th>
-                                                <th>Prsent days</th>
-                                              </tr>
-                                            </thead>
-                                            <tbody>
-                                              <tr>
-                                                <td>John</td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                              </tr>
-                                              <tr>
-                                                <td>Mary</td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                              </tr>
-                                              <tr>
-                                                <td>July</td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                              </tr>
-                                            </tbody>
-                                          </table>
-                                        
-                             </div>   
-
-             </div>
-             </div>
-
-                
-        </div>
-    </div>        
-                    
-   <!----------------------------leave content-------------------------------------->  
-        
-           <div id="Leave" class="tab-pane fade">
-             <div class="content2">
-                            <div class="col-sm-8">
-                            <div class="abc1">
-                               
-             <ul class="nav nav-pills pills">
-    <li class="active col-sm-4"><a data-toggle="pill" href="#home">Apply for leave</a></li>
-    <li class="col-sm-4"><a data-toggle="pill" href="#newleaverep">New Leave Report</a></li>
-      </ul></div></div>
-  <div class="tab-content">
-            <div id="home" class="col-sm-8 tab-pane fade in active">
-              <div class="abc1"> 
-            <p class="content4">Staff Leave Application</p> 
-              <form>
-                  <div class="row">
-                      <div class="col-md-5">
-                          <div class="form-group">
-                                                <label>database-id (disabled)</label>
-                                                <input type="text" class="form-control" disabled placeholder="Company" value="IDBCOE11">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>staff-id</label>
-                                                <input type="text" class="form-control" disabled placeholder="Username" value="IDIETES11">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>name</label>
-                                                <input type="text" class="form-control" disabled placeholder="teachername" value="Nilesh Yadav">
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                             <div class="row">
-                                            <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>issuing authority</label>
-                                                <br>
-                                                <div class="sel">
-                                                  <select name="authority">
-                                                    <option value="principle">Principle</option>
-                                                    <option value="VP">VicePrinciple</option>
-                                                      </select>
-                                                </div>
-                                                     </div>
-                                                 </div>
-                                             
-                                                </div>
-                  
-                                            <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>REASON</label>
-                                                <textarea rows="5" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                       <div class="row">
-                                        <div class="col-md-4">
-                                         <div class="form-group">
-                                         <label> starting date</label>   
-                                             <input type="text" class="form-control" id="date">
-                                             
-            
-                                            </div></div>
-                  
-                                          <div class="col-md-4">
-                                         <div class="form-group">
-                                         <label>ending date</label>   
-                                              <input type="text" class="form-control" id="date1">
-            
-                                              </div></div>
-                                         </div>
-            <div class="row">
-                <button type="submit" class="btn btn-fill pull-right">send</button></div>
-                                    
-                  </form>
-                  </div></div>
-                     <div id="newleaverep" class="col-sm-8 tab-pane fade">
-                       <div class="abc1">
-                         <p class="content4">New Leave Report</p>
-                         </div>
-                                                 
-                           </div>
-
-                 </div>
-                 
-                 </div></div>
-            
-            <!----------------------------complain content---------------------------------->  
-            <div id="Complain" class="tab-pane fade">
-                    <div class="content2">
-                                   <div class="col-sm-8">
-                                   <div class="abc1">
-                                      
-                    <ul class="nav nav-pills pills">
-           <li class="active col-sm-4"><a data-toggle="pill" href="#complain">Apply for Complain</a></li>
-           <li class="col-sm-4"><a data-toggle="pill" href="#newcomprep">New Complain Report</a></li>
-             </ul></div></div>
-         <div class="tab-content">
-                   <div id="complain" class="col-sm-8 tab-pane fade in active">
-                     <div class="abc1"> 
-                   <p class="content4">Staff Complain Application</p> 
-                     <form>
-                         <div class="row">
-                             <div class="col-md-5">
-                                 <div class="form-group">
-                                                       <label>database-id (disabled)</label>
-                                                       <input type="text" class="form-control" disabled placeholder="Company" value="IDBCOE11">
-                                                   </div>
-                                               </div>
-                                               <div class="col-md-3">
-                                                   <div class="form-group">
-                                                       <label>staff-id</label>
-                                                       <input type="text" class="form-control" disabled placeholder="Username" value="IDIETES11">
-                                                   </div>
-                                               </div>
-                                               <div class="col-md-4">
-                                                   <div class="form-group">
-                                                       <label>name</label>
-                                                       <input type="text" class="form-control" disabled placeholder="teachername" value="Nilesh Yadav">
-                                                   </div>
-                                               </div>
-                                           </div>
-                   
-                                                    <div class="row">
-                                                   <div class="col-md-4">
-                                                   <div class="form-group">
-                                                       <label>issuing authority</label>
-                                                       <br>
-                                                       <div class="sel">
-                                                         <select name="authority">
-                                                           <option value="principle">Principle</option>
-                                                           <option value="VP">VicePrinciple</option>
-                                                             </select>
-                                                       </div>
-                                                            </div>
-                                                        </div>
-                                                    
-                                                       </div>
-                         
-                                                   <div class="row">
-                                               <div class="col-md-12">
-                                                   <div class="form-group">
-                                                       <label>REASON</label>
-                                                       <textarea rows="5" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
-                                                   </div>
-                                               </div>
-                                           </div>
-       
-                                              
-                   <div class="row">
-                       <button type="submit" class="btn  btn-fill pull-right">send</button></div>
-                                           
-                         </form>
-                         </div></div>
-                         <div id="newcomprep" class="col-sm-8 tab-pane fade">
-                             <div class="abc1"><p class="content4">New Complain Report</p>
-                            </div>
-                         </div>
-                            
                         </div>
-                        
-                        </div></div>
-                  
-            
-   <!----------------------------timetable content---------------------------------->
-            
-           <div id="timetable" class="tab-pane fade">
-             <div class="content6">
-            <div class="col-sm-11">
-              <div class="abc1"> 
-                <div class="row">  
-                    <div class="col-sm-10">
-                      <p class="content4">Staff TimeTable</p>
+                      </form>
+                      <h2 style="text-align: center">Jhon Deo</h2>
+                      <p style="font-size:16.5px;color:#9A9A9A;text-align: center">Jhondeo24 </p>
+                      <p style="text-align:center;font-size:14px;padding-bottom: 50px">"Lamborghini Mercy<br> Your chick
+                        she so thirsty<br> I'm in that two seat Lambo"</p>
+                      <div class="container-fluid icons">
+                        <div class="border"></div>
+                        <i class="fa fa-facebook-square" style="font-size:15px;padding:10px;color:#9A9A9A"></i>
+                        <i class="fa fa-google-plus-circle" style="font-size:15px;padding:10px;color:#9A9A9A"></i>
+                        <i class="fa fa-twitter" style="font-size:15px;padding:10px;color:#9A9A9A"></i>
+                      </div>
+
+
+
+
+
                     </div>
-                  
-                    <div class="col-sm-2">
-                      <div class="form-group">
-                         <button style="font-size:14px;width: 100%;" onclick="printdata('data');">Print <i class="fa fa-print" style="font-size: 16px"></i></button>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+
+            <!--------------------------------Add Student-------------------------->
+            <div id="Addstu" class="tab-pane fade">
+              <div class="content2">
+                <div class="col-sm-12" id="form1">
+                  <div class="abc1">
+                    <p class="content4">Add Student</p>
+                    <form>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+
+                            <div class="sel"> <label style="margin-left:15px">Select Standard:</label>
+                              <select required style="margin-right:10px">
+                                <option class="opt" value="select">Select</option>
+                                <option class="opt" value="1st">1st </option>
+                                <option class="opt" value="2nd">2nd </option>
+                                <option class="opt" value="3rd">3rd </option>
+                                <option class="opt" value="4th">4th </option>
+                              </select>
+                              <label style="margin-left:15px">Select Branch:</label>
+                              <select required style="margin-right:10px">
+                                <option class="opt" value="select">Select</option>
+                                <option class="opt" value="Comp">Computer </option>
+                                <option class="opt" value="Mech">Mechanical </option>
+                                <option class="opt" value="Extc">Electrical</option>
+                                <option class="opt" value="Etrx">Electronic</option>
+                              </select>
+                            </div>
+                            <a style="background-color:#ffcc80; color: white;" class="btn  btn-fill pull-right"
+                              id="show">Select</a>
+                          </div>
+
+                        </div>
                       </div>
-                      <div class="form-group">
-                         <button style="font-size:14px;width: 100%;" id="pdf" onclick="getpdfdata();">Pdf <i class="fa fa-print" style="font-size: 16px"></i></button>
-                      </div>
+                    </form>
+
                   </div>
                 </div>
-                <div id="data">
-            <table class="table table-hover table-striped" id="">
-                                    <thead>
-                                        <th>TIME<i class='fas fa-arrow-right' style="padding-left:7px"></i><br>DAYS<i class='fas fa-arrow-down' style="padding-left:5px"></i></th>
-                                    	<th>11:30pm<br>12:30am</th>
-                                    	<th>11:30pm<br>12:30am</th>
-                                    	<th>11:30pm<br>12:30am</th>
-                                    	<th></th>
-                                        <th>11:30pm<br>12:30am</th>
-                                        <th>11:30pm<br>12:30am</th>
-                                        <th>11:30pm<br>12:30am</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                        	<td>Monday</td>
-                                        	<td>BD</td>
-                                        	<td>BD</td>
-                                        	<td>PDS</td>
-                                            <td><B>B</B></td>
-                                            <td>DWM</td>
-                                            <td>DWM</td>
-                                        	<td>HMI</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>Tuesday</td>
-                                        	<td>BD</td>
-                                        	<td>BD</td>
-                                        	<td>PDS</td>
-                                            <td><B>R</B></td>
-                                            <td>DWM</td>
-                                            <td>DWM</td>
-                                        	<td>HMI</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>Wednesday</td>
-                                        	<td>BD</td>
-                                        	<td>BD</td>
-                                        	<td>PDS</td>
-                                            <td><B>E</B></td>
-                                            <td>DWM</td>
-                                            <td>DWM</td>
-                                        	<td>HMI</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>Thursday</td>
-                                        	<td>BD</td>
-                                        	<td>BD</td>
-                                        	<td>PDS</td>
-                                            <td><B>A</B></td>
-                                            <td>DWM</td>
-                                            <td>DWM</td>
-                                        	<td>HMI</td>
-                                        </tr>
-                                        <tr>
-                                        	<td>Friday</td>
-                                        	<td>BD</td>
-                                        	<td>BD</td>
-                                        	<td>PDS</td>
-                                            <td><B>K</B></td>
-                                            <td>DWM</td>
-                                            <td>DWM</td>
-                                        	<td>HMI</td>
-                                        </tr>
-                                               </tbody>
-                                </table>
-</div>
-   
-               </div>
-            </div>
-                 </div></div>
-            
-            
-            </div>
-            </div>
-        </div>
+                <div class="col-sm-8" id="form">
+                  <div class="abc1">
+                    <p class="content4">Add Student</p>
+                    <form action="/users/add_student" method="POST">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label>staff-id</label>
+                            <input type="text" class="form-control form_c" name="id" placeholder="Username" value="stu">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control form_c" name="email" placeholder="Email">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label>password</label>
+                            <input type="password" class="form-control form_c" name="password" placeholder="*******">
+                          </div>
+                        </div>
+                      </div>
 
-            
-            <!----------------copyright--------------------------->
-           
-        <div class="content2">
-        <footer class="footer">
-           <div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">more</a>
-               
-               <p class="copyright pull-right">
-                   &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative Tim, made with love for a better web</a>
-                </p>
-           
-</div>
- 
-            
-            
-            
-            </footer>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" class="form-control form_c" name="fname" placeholder="Type your first name">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label>middle Name</label>
+                            <input type="text" class="form-control form_c" name="mname" placeholder="Type your mast Name">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" class="form-control form_c" name="lname" placeholder="Type your last name">
+                          </div>
+                        </div>
+
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label>Mother's Name</label>
+                            <input type="text" class="form-control form_c" name="momname" placeholder="Type your mother's name">
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label>Address</label>
+                            <input type="text" class="form-control form_c" name="address" placeholder="Type your address here">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label>City</label>
+                            <input type="text" class="form-control form_c" name="city" placeholder="City">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label>Contact Numbar</label>
+                            <input type="text" class="form-control form_c" name="number" placeholder="contact number">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label>Department</label>
+                            <input type="text" class="form-control form_c" name="department" placeholder="Department">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label>Year</label>
+                            <input type="text" class="form-control form_c" name="year" placeholder="Year">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label>Profile Picture</label>
+                            <input type="text" class="form-control form_c" name="profile" placeholder="Profile Picture">
+                          </div>
+                        </div>
+                      </div>
+                      <button type="submit" class="btn  btn-fill pull-right">Update Profile</button>
+                      <div class="clearfix"></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!---------------------------student report------------------------------------->
+            <div id="Sturep" class="tab-pane fade">
+              <div class="content2">
+                <div class="col-sm-12" id="form2">
+                  <div class="abc1">
+                    <p class="content4">Student Report</p>
+                    <form>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="form-group">
+
+                            <div class="sel">
+                              <label style="margin-left:10px">Branch:</label>
+                              <select required style="margin-right:10px">
+                                <option class="opt" value="select">Select</option>
+                                <option class="opt" value="Comp">Computer </option>
+                                <option class="opt" value="Mech">Mechanical </option>
+                                <option class="opt" value="Extc">Electrical</option>
+                                <option class="opt" value="Etrx">Electronic</option>
+                              </select>
+                              <label style="margin-left:10px">Sem:</label>
+                              <select required style="margin-right:10px">
+                                <option class="opt" value="select">Select</option>
+                                <option class="opt" value="1st">1st </option>
+                                <option class="opt" value="2nd">2nd </option>
+                                <option class="opt" value="3rd">3rd </option>
+                                <option class="opt" value="4th">4th </option>
+                                <option class="opt" value="5th">5th </option>
+                                <option class="opt" value="6th">6th </option>
+                                <option class="opt" value="7th">7th </option>
+                                <option class="opt" value="8th">8th </option>
+                              </select>
+                              <label style="margin-left:10px">Division:</label>
+                              <select required style="margin-right:10px">
+                                <option class="opt" value="select">Select</option>
+                                <option class="opt" value="A">A</option>
+                                <option class="opt" value="B">B</option>
+                              </select>
+                              <label style="margin-left:10px">Month:</label>
+                              <select required style="margin-right:10px">
+                                <option class="opt" value="select">Select</option>
+                                <option class="opt" value="jan">january</option>
+                                <option class="opt" value="feb">february </option>
+                                <option class="opt" value="mar">march</option>
+                                <option class="opt" value="apr">april</option>
+                                <option class="opt" value="may">may</option>
+                                <option class="opt" value="jun">june </option>
+                                <option class="opt" value="jul">july </option>
+                                <option class="opt" value="aug">august </option>
+                                <option class="opt" value="sep">september</option>
+                                <option class="opt" value="oct">october </option>
+                                <option class="opt" value="nov">november</option>
+                                <option class="opt" value="dec">december</option>
+                              </select>
+                            </div>
+                            <button type="button" class="btn  btn-fill pull-right" id="show2">Select</button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-sm-12" id="form3" style="display:none">
+                  <div class="abc1">
+                    <div class="row">
+                      <div class="col-sm-10">
+                        <p class="content4">Student Report</p>
+                      </div>
+
+                      <div class="col-sm-2">
+                        <div class="form-group">
+                          <button style="font-size:14px;width: 100%;margin-left: 2px;">Send<i class="fa fa-send"
+                              style="font-size: 16px"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Student Name</th>
+                            <th>Unit Test 1</th>
+                            <th>Unit Test 2</th>
+                            <th>working days</th>
+                            <th>Prsent days</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>John</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>Mary</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>July</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    </div>
+
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+            <!----------------------------leave content-------------------------------------->
+
+            <div id="Leave" class="tab-pane fade">
+              <div class="content2">
+                <div class="col-sm-8">
+                  <div class="abc1">
+
+                    <ul class="nav nav-pills pills">
+                      <li class="active col-sm-4"><a data-toggle="pill" href="#home">Apply for leave</a></li>
+                      <li class="col-sm-4"><a data-toggle="pill" href="#newleaverep">New Leave Report</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tab-content">
+                  <div id="home" class="col-sm-8 tab-pane fade in active">
+                    <div class="abc1">
+                      <p class="content4">Staff Leave Application</p>
+                      <form>
+                        <div class="row">
+                          <div class="col-md-5">
+                            <div class="form-group">
+                              <label>database-id (disabled)</label>
+                              <input type="text" class="form-control" disabled placeholder="Company" value="IDBCOE11">
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label>staff-id</label>
+                              <input type="text" class="form-control" disabled placeholder="Username" value="IDIETES11">
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label>name</label>
+                              <input type="text" class="form-control" disabled placeholder="teachername"
+                                value="Nilesh Yadav">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label>issuing authority</label>
+                              <br>
+                              <div class="sel">
+                                <select name="authority">
+                                  <option value="principle">Principle</option>
+                                  <option value="VP">VicePrinciple</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <label>REASON</label>
+                              <textarea rows="5" class="form-control" placeholder="Here can be your description"
+                                value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label> starting date</label>
+                              <input type="text" class="form-control" id="date">
+
+
+                            </div>
+                          </div>
+
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label>ending date</label>
+                              <input type="text" class="form-control" id="date1">
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <button type="submit" class="btn btn-fill pull-right">send</button></div>
+
+                      </form>
+                    </div>
+                  </div>
+                  <div id="newleaverep" class="col-sm-8 tab-pane fade">
+                    <div class="abc1">
+                      <p class="content4">New Leave Report</p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+            <!----------------------------complain content---------------------------------->
+            <div id="Complain" class="tab-pane fade">
+              <div class="content2">
+                <div class="col-sm-8">
+                  <div class="abc1">
+
+                    <ul class="nav nav-pills pills">
+                      <li class="active col-sm-4"><a data-toggle="pill" href="#complain">Apply for Complain</a></li>
+                      <li class="col-sm-4"><a data-toggle="pill" href="#newcomprep">New Complain Report</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tab-content">
+                  <div id="complain" class="col-sm-8 tab-pane fade in active">
+                    <div class="abc1">
+                      <p class="content4">Staff Complain Application</p>
+                      <form>
+                        <div class="row">
+                          <div class="col-md-5">
+                            <div class="form-group">
+                              <label>database-id (disabled)</label>
+                              <input type="text" class="form-control" disabled placeholder="Company" value="IDBCOE11">
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label>staff-id</label>
+                              <input type="text" class="form-control" disabled placeholder="Username" value="IDIETES11">
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label>name</label>
+                              <input type="text" class="form-control" disabled placeholder="teachername"
+                                value="Nilesh Yadav">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label>issuing authority</label>
+                              <br>
+                              <div class="sel">
+                                <select name="authority">
+                                  <option value="principle">Principle</option>
+                                  <option value="VP">VicePrinciple</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <label>REASON</label>
+                              <textarea rows="5" class="form-control" placeholder="Here can be your description"
+                                value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="row">
+                          <button type="submit" class="btn  btn-fill pull-right">send</button></div>
+
+                      </form>
+                    </div>
+                  </div>
+                  <div id="newcomprep" class="col-sm-8 tab-pane fade">
+                    <div class="abc1">
+                      <p class="content4">New Complain Report</p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+
+            <!----------------------------timetable content---------------------------------->
+
+            <div id="timetable" class="tab-pane fade">
+              <div class="content6">
+                <div class="col-sm-11">
+                  <div class="abc1">
+                    <div class="row">
+                      <div class="col-sm-10">
+                        <p class="content4">Staff TimeTable</p>
+                      </div>
+
+                      <div class="col-sm-2">
+                        <div class="form-group">
+                          <button style="font-size:14px;width: 100%;" onclick="printdata('data');">Print <i
+                              class="fa fa-print" style="font-size: 16px"></i></button>
+                        </div>
+                        <div class="form-group">
+                          <button style="font-size:14px;width: 100%;" id="pdf" onclick="getpdfdata();">Pdf <i
+                              class="fa fa-print" style="font-size: 16px"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="data">
+                      <table class="table table-hover table-striped" id="">
+                        <thead>
+                          <th>TIME<i class='fas fa-arrow-right' style="padding-left:7px"></i><br>DAYS<i
+                              class='fas fa-arrow-down' style="padding-left:5px"></i></th>
+                          <th>11:30pm<br>12:30am</th>
+                          <th>11:30pm<br>12:30am</th>
+                          <th>11:30pm<br>12:30am</th>
+                          <th></th>
+                          <th>11:30pm<br>12:30am</th>
+                          <th>11:30pm<br>12:30am</th>
+                          <th>11:30pm<br>12:30am</th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Monday</td>
+                            <td>BD</td>
+                            <td>BD</td>
+                            <td>PDS</td>
+                            <td><B>B</B></td>
+                            <td>DWM</td>
+                            <td>DWM</td>
+                            <td>HMI</td>
+                          </tr>
+                          <tr>
+                            <td>Tuesday</td>
+                            <td>BD</td>
+                            <td>BD</td>
+                            <td>PDS</td>
+                            <td><B>R</B></td>
+                            <td>DWM</td>
+                            <td>DWM</td>
+                            <td>HMI</td>
+                          </tr>
+                          <tr>
+                            <td>Wednesday</td>
+                            <td>BD</td>
+                            <td>BD</td>
+                            <td>PDS</td>
+                            <td><B>E</B></td>
+                            <td>DWM</td>
+                            <td>DWM</td>
+                            <td>HMI</td>
+                          </tr>
+                          <tr>
+                            <td>Thursday</td>
+                            <td>BD</td>
+                            <td>BD</td>
+                            <td>PDS</td>
+                            <td><B>A</B></td>
+                            <td>DWM</td>
+                            <td>DWM</td>
+                            <td>HMI</td>
+                          </tr>
+                          <tr>
+                            <td>Friday</td>
+                            <td>BD</td>
+                            <td>BD</td>
+                            <td>PDS</td>
+                            <td><B>K</B></td>
+                            <td>DWM</td>
+                            <td>DWM</td>
+                            <td>HMI</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
         </div>
-            
-            
-            
-            
-            
-            
-           <!-------------------js libraries--------------------------->
-        
-        
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.counterup.js"></script>
-        <script src="js/jquery.waypoints.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-		<script src="jquery.counterup.min.js"></script>
-        <script src="contactform/contactform.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/typer.js"></script>
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="js/locales/en.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
-        
-  <script>
-        jQuery(document).ready(function($) {
-            $('.counter').counterUp({
-                delay: 10,
-                time: 1000
-            });
-        });
-    </script>
-        
-        
-        <script>
-          $("p").load(function(){
-            ("i").hide();
+      </div>
+
+
+      <!----------------copyright--------------------------->
+
+      <div class="content2">
+        <footer class="footer">
+          <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">more</a>
+
+            <p class="copyright pull-right">
+              &copy;
+              <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative
+                Tim, made with love for a better web</a>
+            </p>
+
+          </div>
+
+
+
+
+        </footer>
+      </div>
+
+
+
+
+
+
+      <!-------------------js libraries--------------------------->
+
+
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.counterup.js"></script>
+      <script src="js/jquery.waypoints.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+      <script src="jquery.counterup.min.js"></script>
+      <script src="contactform/contactform.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/typer.js"></script>
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script src="js/locales/en.js"></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+        integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+        crossorigin="anonymous"></script>
+
+      <script>
+        jQuery(document).ready(function ($) {
+          $('.counter').counterUp({
+            delay: 10,
+            time: 1000
           });
-        </script>
-        
-     <!---------------print page------------>    
-        
-        <script>
+        });
+      </script>
+
+
+      <script>
+        $("p").load(function () {
+          ("i").hide();
+        });
+      </script>
+
+      <!---------------print page------------>
+
+      <script>
         function printdata(paravalue) {
           var fullpagedata = document.body.innerHTML;
           var printingData = document.getElementById(paravalue).innerHTML;
           document.body.innerHTML = printingData;
           window.print();
           document.body.innerHTML = fullpagedata;
-           }
-       </script>
-       <script type="text/javascript">
-         
-         function getpdfdata() {
-           var doc = new jsPDF();
-            doc.fromHTML($('#data').get(0), 10, 10, {
-        'width': 500
-    });
-           doc.save('test.pdf');
-         }
-       </script>
+        }
+      </script>
+      <script type="text/javascript">
 
-   
-        <!---------------date picker------------>
-            
-                <script>
-                 $("#date").datepicker();
-                    $("#date1").datepicker();
-                    $("#date2").datepicker();
-                    $("#date3").datepicker();
-                    
-                
-  
-                 </script>
-   <!--------------------------box----------------------------->
-   <script>
-
-        $(".trigger").click(function(e){
-            e.preventDefault();
-            dataModal = $(this).attr("data-modal");
-            $("#" + dataModal).css({"display":"block"});
-            // $("body").css({"overflow-y": "hidden"}); //Prevent double scrollbar.
+        function getpdfdata() {
+          var doc = new jsPDF();
+          doc.fromHTML($('#data').get(0), 10, 10, {
+            'width': 500
           });
-          
-          $(".sandbox").click(function(){
-            $(".box1").css({"display":"none"});
-            // $("body").css({"overflow-y": "auto"}); //Prevent double scrollbar.
-          });</script>
+          doc.save('test.pdf');
+        }
+      </script>
 
-<!------------------------add student---------------------------------->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-            <script>
-                    $(document).ready(function(){
-                      $("#show").click(function(){
-                        $("#form").show();
-                      });
-                        });
-                        
-    ////////////student Report/////////////////////////
-                        $(document).ready(function(){
-                      $("#show2").click(function(){
-                        $("#form3").show();
-                      });
-                        });
-                       
-                    </script>
-            
-    </body>
+      <!---------------date picker------------>
+
+      <script>
+        $("#date").datepicker();
+        $("#date1").datepicker();
+        $("#date2").datepicker();
+        $("#date3").datepicker();
+
+
+
+      </script>
+      <!--------------------------box----------------------------->
+      <script>
+
+        $(".trigger").click(function (e) {
+          e.preventDefault();
+          dataModal = $(this).attr("data-modal");
+          $("#" + dataModal).css({ "display": "block" });
+          // $("body").css({"overflow-y": "hidden"}); //Prevent double scrollbar.
+        });
+
+        $(".sandbox").click(function () {
+          $(".box1").css({ "display": "none" });
+          // $("body").css({"overflow-y": "auto"}); //Prevent double scrollbar.
+        });</script>
+
+      <!------------------------add student---------------------------------->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+      <script>
+        $(document).ready(function () {
+          $("#show").click(function () {
+            $("#form").show();
+          });
+        });
+
+        ////////////student Report/////////////////////////
+        $(document).ready(function () {
+          $("#show2").click(function () {
+            $("#form3").show();
+          });
+        });
+
+      </script>
+
+</body>
+
 </html>
