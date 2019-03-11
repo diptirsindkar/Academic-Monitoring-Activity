@@ -104,7 +104,7 @@ app.use(function (err, req, res, next) {
 
 
 app.listen(app.get('port'), function () {
-  console.log('started TEAM server at http://localhost:' + app.get('port')+ __dirname);
+  console.log('started TEAM server at http://localhost:' + app.get('port'));
 })
 
 
