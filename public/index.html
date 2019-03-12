@@ -577,8 +577,8 @@ Bharat College of Engineering is a place of learning, fun, culture, lore, litera
         <div class="modal-content modal-popup">
             <a href="index.html" class="close-link"><i class="icon_close_alt2"></i></a>
             <form class="popup-form action-link" id="myLogin" method="get">
-                <input type="text" class="form-control form-white"  name="Username" placeholder="Username" id="uname">
-                <input type="text" class="form-control form-white" name="Password" placeholder="Password">
+                <input type="text" class="form-control form-white"  name="username" placeholder="Username" id="uname">
+                <input type="text" class="form-control form-white" name="password" placeholder="Password">
                 <button type="submit" class="btn btn-submit" id="btnsubmit">Submit</button>
             </form>
         </div>
@@ -653,7 +653,7 @@ $(document).ready(function(){
             
        if(uname.length===3)
         {
-            if(uname==='say')
+            if(uname==='stu')
                 {
                     $('.action-link').attr("action","/users/stu_login");
                 }

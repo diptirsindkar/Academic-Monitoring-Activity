@@ -53,7 +53,7 @@
         <ul class="nav nav-tabs">
             <div class="hstudent">
                 <a href="#student" data-toggle="tab">
-                    <p>student</p>
+                    <p mongo-data="student_id">student</p>
                 </a>
             </div>
             <li class="active li">
@@ -940,44 +940,45 @@
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label>email address</label>
-                                                    <input name="email" type="email" class="form-control" required="required">
+                                                    <input name="email" type="email" class="form-control"
+                                                        required="required">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>First name</label>
-                                                <input name="fname" type="text" class="form-control" placeholder="first name"
-                                                    required="required">
+                                                <input name="fname" type="text" class="form-control"
+                                                    placeholder="first name" required="required">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>middle name</label>
-                                                <input name="mname" type="text" class="form-control" placeholder="middle name"
-                                                    required="required">
+                                                <input name="mname" type="text" class="form-control"
+                                                    placeholder="middle name" required="required">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>last name</label>
-                                                <input name="lname" type="text" class="form-control" placeholder="last name"
-                                                    required="required">
+                                                <input name="lname" type="text" class="form-control"
+                                                    placeholder="last name" required="required">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>mother's name</label>
-                                                <input name="momname" type="text" class="form-control" placeholder="mother's name"
-                                                    required="required">
+                                                <input name="momname" type="text" class="form-control"
+                                                    placeholder="mother's name" required="required">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label>Address</label>
-                                                    <input name="address" type="text" class="form-control" placeholder="Home Address"
-                                                        required="required">
+                                                    <input name="address" type="text" class="form-control"
+                                                        placeholder="Home Address" required="required">
                                                 </div>
                                             </div>
                                         </div>
@@ -985,29 +986,29 @@
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label>City</label>
-                                                    <input name="city" type="text" class="form-control" placeholder="City"
-                                                        required="required">
+                                                    <input name="city" type="text" class="form-control"
+                                                        placeholder="City" required="required">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label>contact no.</label>
-                                                    <input name="number" type="text" class="form-control" placeholder="number"
-                                                        required="required">
+                                                    <input name="number" type="text" class="form-control"
+                                                        placeholder="number" required="required">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label>department</label>
-                                                    <input name="department" type="text" class="form-control" placeholder="computer"
-                                                        required="required">
+                                                    <input name="department" type="text" class="form-control"
+                                                        placeholder="computer" required="required">
                                                 </div>
                                             </div>
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label>password</label>
-                                                    <input name="password" type="text" class="form-control" placeholder="*******"
-                                                        value="staff@123" required="required">
+                                                    <input name="password" type="text" class="form-control"
+                                                        placeholder="*******" value="staff@123" required="required">
                                                 </div>
                                             </div>
                                         </div>
@@ -1066,7 +1067,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
         integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
         crossorigin="anonymous"></script>
-
+    <script src="/js/student_backend.js"></script>
     <script>
         jQuery(document).ready(function ($) {
             $('.counter').counterUp({ delay: 10, time: 1000 });
