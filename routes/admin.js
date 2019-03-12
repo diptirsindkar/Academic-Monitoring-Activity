@@ -9,19 +9,9 @@ var url = 'mongodb://localhost:27017/';
 // router.get('/', function (req, res) {
 //   res.render('admin',{title:"admin"});
 // });
-router.get('/login', function (req, res, next) {
-  console.log("logged in")
-});
-
 
 router.get('/admin_login', function (req, res, next) {
   res.redirect('/dashboard.html');
-});
-router.get('/dir', function (req, res, next) {
-  res.render('admin/directory', { title: "dir" });
-});
-router.get('/profile/staff', function (req, res, next) {
-  console.log("profile");
 });
 
 
