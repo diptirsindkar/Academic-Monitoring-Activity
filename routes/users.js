@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var mongo = require('mongodb').MongoClient;
 var objectId = require('mongodb').ObjectID;
-var url = 'mongodb://localhost:27017/';
+var url = 'mongodb+srv://root:root@ama-ylzfp.mongodb.net/test?retryWrites=true';
 
 /* GET users listing. */
 router.get('/stu_login', function (req, res) {
@@ -15,12 +15,12 @@ router.get('/stu_login', function (req, res) {
       if (id == result[i].Username) {
         if (pass == result[i].Password) {
           req.session.user = true;
-          req.session.user.id = id;
+          req.session.student = result[i];
         }
       }
     }
     if (req.session.user) {
-      console.log(req.session.user);
+      console.log(req.session.student);
       res.redirect('/student5.html');
     } else {
       console.log(req.session.user);
@@ -29,20 +29,21 @@ router.get('/stu_login', function (req, res) {
 
   get_data(url, "ama", "student", login_data);
 });
+
 router.get('/sta_login', function (req, res) {
 
 });
+
 router.get('/get_dummy', function (req, res) {
-  console.log(req.session.user);
-  res.send(req.session.user);
+  res.send(req.session.student);
 });
+
 router.get('/get_student', function (req, res) {
   get_data(url, "ama", "student", display_stu);
   function display_stu(student) {
     res.send(student)
   }
 });
-
 
 router.post('/add_student', function (req, res) {
   insert_data(url, "ama", "student", req.body);

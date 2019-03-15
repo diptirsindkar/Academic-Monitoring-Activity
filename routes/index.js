@@ -3,7 +3,7 @@ var router = express.Router();
 var mongo = require('mongodb').MongoClient;
 var objectId = require('mongodb').ObjectID;
 var assert = require('assert');
-var url = 'mongodb://localhost:27017/';
+var url = 'mongodb+srv://root:root@ama-ylzfp.mongodb.net/test?retryWrites=true';
 const nodemailer = require("nodemailer");
 
 router.get('/index.html', function (req, res) {
@@ -107,11 +107,6 @@ router.post('/delete', function (req, res, next) {
     });
 });
 
-router.post('/add_staff', function (req, res, next) {
-    insert_data(url,'ama','staff',req.body);
-    res.redirect("student5.html")
-});
-
 router.post('/login', function (req, res, next) {
     var isUser = false;
     var allowUser = false;
@@ -134,7 +129,7 @@ router.post('/login', function (req, res, next) {
         console.log(allowUser);
         res.redirect('/student5.html');
     }
-    get_data(url, "mydb", "customers", login_data);
+    get_data(url, "mydb", "customers", login_data, {});
 });
 
 router.get('/logout', function (req, res, next) {
@@ -143,7 +138,7 @@ router.get('/logout', function (req, res, next) {
 });
 
 router.get('/notification', function (req, res, next) {
-    res.send(get_data(url, 'ama', 'noti'));
+    res.send(get_data(url, 'ama', 'noti',function (){}, {}));
 });
 
 router.post('/notification', function (req, res, next) {
@@ -154,12 +149,21 @@ router.post('/notification', function (req, res, next) {
     insert_data(url, 'ama', 'noti', notification_data);
 });
 
-var get_data = function (url, db_name, collection, fun) {
+router.get('/get_report', function (req, res, next) {
+    var student = req.body.id
+    console.log(req.body);
+    function report(report){
+        res.send(report);
+    }
+    get_data(url, 'ama', 'report',report,{"id":"stu001"})
+    
+});
+
+var get_data = function (url, db_name, collection, fun, query) {
     var return_data;
     mongo.connect(url, function (err, db) {
         if (err) throw err;
         var dbo = db.db(db_name);
-        var query = {};
         dbo.collection(collection).find(query).toArray(function (err, result) {
             if (err) throw err;
             db.close();

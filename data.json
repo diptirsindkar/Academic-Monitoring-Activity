@@ -53,5 +53,15 @@
         "Details": "",
         "start_date": "",
         "end_date": ""
+    },
+    {
+        "name": "Report",
+        "month": "",
+        "id": "",
+        "ut1": "",
+        "ut2": "",
+        "total_days": "",
+        "present": "",
+        "leave_taken": ""
     }
 ]
