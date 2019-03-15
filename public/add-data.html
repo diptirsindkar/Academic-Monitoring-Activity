@@ -201,47 +201,184 @@
                         <div class="header">
                             <h4 class="title">Add Notification</h4>
                         </div>
-                        <div class="content">
-                            <div class="tab-pane fade in active" id="home">
-                                <div class="list-group">
-                                    <!--<h3>Pills</h3>
-                                    <ul class="nav nav-tabs nav-justified">
-                                        <li class="active"><a href="#">Event</a></li>
-                                        <li><a href="#">Exam</a></li>
-                                        <li><a href="#">Admission</a></li>
-                                        <li><a href="#">Results</a></li>
-                                    </ul>-->
+<div class="content">
+    <div class="tab-pane fade in active" id="home">
+        <div class="list-group">
                                     
-                                    <div class="tabs">
-                                        <input type="radio" name="tabs" id="tabone" checked="checked">
-                                        <label for="tabone" class="" style="padding:10px 90px;">Tab One</label>
-                                        <div class="tab">
-                                            <h1>Tab One Content</h1>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                        </div>
-                                        
-                                        <input type="radio" name="tabs" id="tabtwo">
-                                        <label for="tabtwo" class="" style="padding:10px 90px;">Tab Two</label>
-                                        <div class="tab">
-                                            <h1>Tab Two Content</h1>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                        </div>
-                                        
-                                        <input type="radio" name="tabs" id="tabthree">
-                                        <label for="tabthree" class="" style="padding:10px 90px;">Tab Three</label>
-                                        <div class="tab">
-                                            <h1>Tab Three Content</h1>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        </div>
-                                        
-                                        <input type="radio" name="tabs" id="tabfour">
-                                        <label for="tabfour" class="" style="padding:10px 90px;">Tab Three</label>
-                                        <div class="tab">
-                                            <h1>Tab Four Content</h1>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        </div>
-                                
-                            </div>
+<div class="tabs">
+    <input type="radio" name="tabs" id="tabone" checked="checked">
+    <label for="tabone" class="tablabel" style="padding:10px 96px; margin-left: 10px;">Exam</label>
+    <div class="tab">
+        <form>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Upload image</label>
+                        <input type="file" />
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <label>Exam Title</label>
+                        <input type="text" class="form-control" placeholder="Add Title Here" value="Andrew">
+                    </div>
+                </div>
+            </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Section</label>
+                        <input type="text" class="form-control" placeholder="Add Section Here" value="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea rows="5" class="form-control" placeholder="Add Description Here" value=""></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-info btn-fill pull-right">Send Data</button>
+                <div class="clearfix"></div>
+                
+        </form>
+    </div>
+
+    <input type="radio" name="tabs" id="tabtwo">
+    <label for="tabtwo" class="tablabel" style="padding:10px 96px;">Event</label>
+    <div class="tab">
+        <form>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Upload image</label>
+                        <input type="file" />
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <label>Event Title</label>
+                        <input type="text" class="form-control" placeholder="Add Title Here" value="Andrew">
+                    </div>
+                </div>
+            </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Section</label>
+                        <input type="text" class="form-control" placeholder="Add Section Here" value="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea rows="5" class="form-control" placeholder="Add Description Here" value=""></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-info btn-fill pull-right">Send Data</button>
+                <div class="clearfix"></div>
+                
+        </form>
+    </div>
+
+    <input type="radio" name="tabs" id="tabthree">
+    <label for="tabthree" class="tablabel" style="padding:10px 96px;">Admissions</label>
+    <div class="tab">
+        <form>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Upload image</label>
+                        <input type="file" />
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <label>Admission Title</label>
+                        <input type="text" class="form-control" placeholder="Add Title Here" value="Andrew">
+                    </div>
+                </div>
+            </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Section</label>
+                        <input type="text" class="form-control" placeholder="Add Section Here" value="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea rows="5" class="form-control" placeholder="Add Description Here" value=""></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-info btn-fill pull-right">Send Data</button>
+                <div class="clearfix"></div>
+                
+        </form>
+    </div>
+
+    <input type="radio" name="tabs" id="tabfour">
+    <label for="tabfour" class="tablabel" style="padding:10px 96px;">Result</label>
+    <div class="tab">
+        <form>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Upload image</label>
+                        <input type="file" />
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <label>Result Title</label>
+                        <input type="text" class="form-control" placeholder="Add Title Here" value="Andrew">
+                    </div>
+                </div>
+            </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Section</label>
+                        <input type="text" class="form-control" placeholder="Add Section Here" value="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea rows="5" class="form-control" placeholder="Add Description Here" value=""></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-info btn-fill pull-right">Send Data</button>
+                <div class="clearfix"></div>
+                
+        </form>
+    </div>
+
+</div>
                         </div>
                     </div>
                 </div>
@@ -283,7 +420,7 @@
 </div>
 </div>
     
-</div>
+    </div></div></div>
 
 </body>
 

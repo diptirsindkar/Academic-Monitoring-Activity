@@ -2338,7 +2338,8 @@ fieldset[disabled] .btn-neutral.active {
 .card-user .author {
     text-align: center;
     text-transform: none;
-    margin-top: -70px;
+    /*margin-top: -70px;*/
+    margin-top: 0;
 }
 
 .card-user .avatar {
@@ -4004,10 +4005,11 @@ fieldset[disabled] .btn-neutral.active {
         padding: 1rem 2rem;
         margin-right: 0.2rem;
         cursor: pointer;
-        background: #ddd;
+        background: #9368e9;
         font-weight: bold;
         -webkit-transition: background ease 0.2s;
         transition: background ease 0.2s;
+        color: #fff;
     }
     
     .tabs .tab {
@@ -4028,7 +4030,15 @@ fieldset[disabled] .btn-neutral.active {
         position: absolute;
         opacity: 0;
     }
+
+.tab form label{
+    background-color: #fafafa;
+    color: #000;
+    border: 1px solid #ccc;
+}
  
-.tabs input[type="radio"]:checked + label { background: rgba(189, 121, 255, 0.79); } 
+.tabs input[type="radio"]:checked + label { background:  #943bea; } 
 .tabs input[type="radio"]:checked + label + .tab { display: block; }
+
+
   
