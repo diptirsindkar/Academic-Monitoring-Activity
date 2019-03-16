@@ -237,13 +237,13 @@
                                                 <input type="radio" name="tabs" id="tabone" checked="checked">
                                                 <label for="tabone" class="tablabel">Notification</label>
                                                 <div class="tab">
-                                                    <form>
+                                                    <form action="/add_notification" method="POST">
                                                         <div class="row">
                                                             <div class="col-md-9">
                                                                 <div class="form-group">
                                                                     <label>Title</label>
                                                                     <input type="text" class="form-control"
-                                                                        placeholder="Add title Here">
+                                                                        placeholder="Add title Here" name="header">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -252,11 +252,11 @@
                                                             <div class="col-md-12">
                                                                 <div class="form-group">
                                                                     <label>Section</label>
-                                                                    <select>
-                                                                        <option value="volvo">Event</option>
-                                                                        <option value="saab">Exam</option>
-                                                                        <option value="mercedes">Addmission</option>
-                                                                        <option value="audi">Result</option>
+                                                                    <select name="section">
+                                                                        <option value="event" >Event</option>
+                                                                        <option value="exam" >Exam</option>
+                                                                        <option value="addmission" >Addmission</option>
+                                                                        <option value="result" >Result</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -268,7 +268,7 @@
                                                                     <label>Description</label>
                                                                     <textarea rows="5" class="form-control"
                                                                         placeholder="Add Description Here"
-                                                                        value=""></textarea>
+                                                                        name="description"></textarea>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -276,7 +276,7 @@
                                                             <div class="col-md-3">
                                                                 <div class="form-group">
                                                                     <label>Upload image</label>
-                                                                    <input type="file" />
+                                                                    <input name="images" type="file" />
                                                                 </div>
                                                             </div>
                                                         </div>

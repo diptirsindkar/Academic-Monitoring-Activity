@@ -8,26 +8,26 @@ var url = 'mongodb+srv://root:root@ama-ylzfp.mongodb.net/test?retryWrites=true';
 router.get('/stu_login', function (req, res) {
   var id = req.body.username;
   var pass = req.body.password;
-  console.log(id, pass, req.body);
+  console.log(req.body);
 
   function login_data(result) {
-    for (let i = 0; i < result.length; i++) {
-      if (id == result[i].Username) {
-        if (pass == result[i].Password) {
-          req.session.user = true;
-          req.session.student = result[i];
-        }
-      }
-    }
-    if (req.session.user) {
-      console.log(req.session.student);
-      res.redirect('/student5.html');
-    } else {
-      console.log(req.session.user);
-    }
+    // for (let i = 0; i < result.length; i++) {
+    //   if (id == result[i].id) {
+    //     if (pass == result[i].password) {
+    //       req.session.user = true;
+    //       req.session.student = result[i];
+    //     }
+    //   }
+    // }
+    // if (req.session.user) {
+    //   console.log(req.session.student);
+    //   res.redirect('/student5.html');
+    // } else {
+    //   console.log(req.session.user);
+    // }
   }
 
-  get_data(url, "ama", "student", login_data);
+  get_data(url, "ama", "student", login_data,{});
 });
 
 router.get('/sta_login', function (req, res) {
@@ -55,12 +55,10 @@ router.post('/add_student', function (req, res) {
 
 
 
-var get_data = function (url, db_name, collection, fun) {
-  var return_data;
+var get_data = function (url, db_name, collection, fun,query) {
   mongo.connect(url, function (err, db) {
     if (err) throw err;
     var dbo = db.db(db_name);
-    var query = {};
     dbo.collection(collection).find(query).toArray(function (err, result) {
       if (err) throw err;
       db.close();

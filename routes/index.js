@@ -138,16 +138,13 @@ router.get('/logout', function (req, res, next) {
     res.redirect('/');
 });
 
-router.get('/notification', function (req, res, next) {
-    res.send(get_data(url, 'ama', 'noti',function (){}, {}));
+router.get('/get_notification', function (req, res, next) {
+    get_data(url, 'ama', 'noti',function (result){res.send(result);}, {});
 });
 
-router.post('/notification', function (req, res, next) {
-    var notification_data = {
-        header: req.body.header,
-        content: req.body.content,
-    };
-    insert_data(url, 'ama', 'noti', notification_data);
+router.post('/add_notification', function (req, res, next) {
+    insert_data(url, 'ama', 'noti', req.body);
+    res.redirect("add-data.html");
 });
 
 router.get('/get_report', function (req, res, next) {
