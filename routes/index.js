@@ -143,6 +143,7 @@ router.get('/get_notification', function (req, res, next) {
 });
 
 router.post('/add_notification', function (req, res, next) {
+    console.log(req.body);
     insert_data(url, 'ama', 'noti', req.body);
     res.redirect("add-data.html");
 });

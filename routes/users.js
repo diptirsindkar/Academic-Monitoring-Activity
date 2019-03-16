@@ -6,28 +6,8 @@ var url = 'mongodb+srv://root:root@ama-ylzfp.mongodb.net/test?retryWrites=true';
 
 /* GET users listing. */
 router.get('/stu_login', function (req, res) {
-  var id = req.body.username;
-  var pass = req.body.password;
   console.log(req.body);
-
-  function login_data(result) {
-    // for (let i = 0; i < result.length; i++) {
-    //   if (id == result[i].id) {
-    //     if (pass == result[i].password) {
-    //       req.session.user = true;
-    //       req.session.student = result[i];
-    //     }
-    //   }
-    // }
-    // if (req.session.user) {
-    //   console.log(req.session.student);
-    //   res.redirect('/student5.html');
-    // } else {
-    //   console.log(req.session.user);
-    // }
-  }
-
-  get_data(url, "ama", "student", login_data,{});
+  res.redirect("/student5.html");
 });
 
 router.get('/sta_login', function (req, res) {
@@ -39,10 +19,10 @@ router.get('/get_dummy', function (req, res) {
 });
 
 router.get('/get_student', function (req, res) {
-  get_data(url, "ama", "student", display_stu);
   function display_stu(student) {
     res.send(student)
   }
+  get_data(url, "ama", "student", display_stu);
 });
 
 router.post('/add_student', function (req, res) {
