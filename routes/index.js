@@ -110,7 +110,7 @@ router.post('/delete', function (req, res, next) {
 router.post('/login', function (req, res, next) {
     var isUser = false;
     var allowUser = false;
-    var title = req.body.Username;
+    var title = req.body.username;
     var content = req.body.password;
     console.log(title, content, req.body);
 
@@ -126,7 +126,6 @@ router.post('/login', function (req, res, next) {
             allowUser = true;
 
         }
-        console.log(allowUser);
         res.redirect('/student5.html');
     }
     get_data(url, "mydb", "customers", login_data, {});

@@ -5,13 +5,21 @@ var objectId = require('mongodb').ObjectID;
 var url = 'mongodb+srv://root:root@ama-ylzfp.mongodb.net/test?retryWrites=true';
 
 /* GET users listing. */
-router.get('/stu_login', function (req, res) {
-  console.log(req.body);
-  res.redirect("/student5.html");
+router.post('/stu_login', function (req, res, next) {
+  get_data(url, "ama", "student", stu_login,{"id":req.body.username});
+  function stu_login(result){
+    console.log(result);
+    if(result[0].password == req.body.password){
+      req.session.student = result[0];
+      res.redirect("/student5.html");
+    }else{
+      res.redirect("/");
+    }
+  }
 });
 
-router.get('/sta_login', function (req, res) {
-
+router.post('/sta_login', function (req, res) {
+  res.redirect("/staff.html");
 });
 
 router.get('/get_dummy', function (req, res) {
@@ -35,15 +43,15 @@ router.post('/add_student', function (req, res) {
 
 
 
-var get_data = function (url, db_name, collection, fun,query) {
+var get_data = function (url, db_name, collection, fun, query) {
   mongo.connect(url, function (err, db) {
-    if (err) throw err;
-    var dbo = db.db(db_name);
-    dbo.collection(collection).find(query).toArray(function (err, result) {
       if (err) throw err;
-      db.close();
-      fun(result);
-    });
+      var dbo = db.db(db_name);
+      dbo.collection(collection).find(query).toArray(function (err, result) {
+          if (err) throw err;
+          db.close();
+          fun(result);
+      });
   });
 };
 
