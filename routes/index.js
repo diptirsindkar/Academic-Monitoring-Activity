@@ -134,6 +134,7 @@ router.post('/login', function (req, res, next) {
 
 router.get('/logout', function (req, res, next) {
     req.session.user = false;
+    req.session.student = null;
     res.redirect('/');
 });
 
@@ -150,12 +151,12 @@ router.post('/notification', function (req, res, next) {
 });
 
 router.get('/get_report', function (req, res, next) {
-    var student = req.body.id
-    console.log(req.body);
+    var student = req.session.student.id;
+    console.log(student);
     function report(report){
         res.send(report);
     }
-    get_data(url, 'ama', 'report',report,{"id":"stu001"})
+    get_data(url, 'ama', 'report',report,{"id":student})
     
 });
 
