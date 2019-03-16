@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="img/ama-logo-tab.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Add Staff</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="css/animate.min.css" rel="stylesheet" />
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet" />
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="css/demo.css" rel="stylesheet" />
+    <link href="css/admin.css" rel="stylesheet" />
+    <link href="css/addstaff.css" rel="stylesheet" />
+
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="css/pe-icon-7-stroke.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar" data-color="purple" data-image="img/sidebar-5.jpg">
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a href="user.html" class="simple-text">Admin</a>
+                </div>
+
+                <ul class="nav">
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="pe-7s-graph"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+
+                    <li class="active"><a href="add-data.html">
+                            <i class="pe-7s-date"></i>
+                            <p>Add Data</p>
+                        </a></li>
+
+                    <li class="active sublist">
+                        <i class="pe-7s-add-user"></i>
+                        <p data-toggle="collapse" data-target="#profile">Profile</p>
+                        <ul class="collapse" id="profile">
+                            <li><a href="profile.html">
+                                    <i class="pe-7s-angle-right"></i>
+                                    <p>Staff Profile</p>
+                                </a></li>
+
+                            <li><a href="student-profile.html">
+                                    <i class="pe-7s-angle-right"></i>
+                                    <p>Student Profile</p>
+                                </a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="timetable.html">
+                            <i class="pe-7s-date"></i>
+                            <p>Timetable</p>
+                        </a></li>
+
+                    <li>
+                        <a href="directory.html">
+                            <i class="pe-7s-server"></i>
+                            <p>Directory</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="report.html">
+                            <i class="pe-7s-file"></i>
+                            <p>Report</p>
+                        </a>
+                        <!--                   <ul class="submenu">
+                        <li><a href="user.html">
+                            <i class="pe-7s-angle-right"></i><p>Staff Report</p>
+                        </a></li>
+                           
+                        <li><a href="user.html">
+                            <i class="pe-7s-angle-right"></i><p>Student Report</p>
+                        </a></li></ul>-->
+                    </li>
+
+                    <li class="sublist">
+                        <i class="pe-7s-note"></i>
+                        <p data-toggle="collapse" data-target="#leave">Leave</p>
+                        <ul class="collapse" id="leave">
+                            <li>
+                                <a href="leave.html">
+                                    <i class="pe-7s-angle-right"></i>
+                                    <p>Staff Leave</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="student-leave.html">
+                                    <i class="pe-7s-angle-right"></i>
+                                    <p>Student Leave</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sublist">
+                        <i class="pe-7s-mail-open-file"></i>
+                        <p data-toggle="collapse" data-target="#complain">Complain</p>
+                        <ul class="collapse" id="complain">
+                            <li>
+                                <a href="complain.html">
+                                    <i class="pe-7s-angle-right"></i>
+                                    <p>Staff Complain</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="student-complain.html">
+                                    <i class="pe-7s-angle-right"></i>
+                                    <p>Student Complain</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="addstaff" class="tab-pane">
+            <div class="collcontent2">
+                <div class="wrapper">
+                    <div class="col-sm-8">
+                        <div class="abc1">
+                            <p class="collcontent4">
+                                Add Staff
+                            </p>
+                            <form method="POST" action="add_staff">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label>database-id</label>
+                                            <input type="text" class="form-control" placeholder="Company" value="IDBCOE11">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>staff-id</label>
+                                            <input name="id" type="text" class="form-control" value="sta">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>email address</label>
+                                            <input name="email" type="email" class="form-control" required="required">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>First name</label>
+                                        <input name="fname" type="text" class="form-control" placeholder="first name"
+                                            required="required">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>middle name</label>
+                                        <input name="mname" type="text" class="form-control" placeholder="middle name" required="required">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>last name</label>
+                                        <input name="lname" type="text" class="form-control" placeholder="last name" required="required">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>mother's name</label>
+                                        <input name="momname" type="text" class="form-control" placeholder="mother's name" required="required">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Address</label>
+                                            <input name="address" type="text" class="form-control" placeholder="Home Address" required="required">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>City</label>
+                                            <input name="city" type="text" class="form-control" placeholder="City" required="required">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>contact no.</label>
+                                            <input name="number" type="text" class="form-control" placeholder="number" required="required">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>department</label>
+                                            <input name="department" type="text" class="form-control" placeholder="computer" required="required">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>password</label>
+                                            <input name="password" type="text" class="form-control" placeholder="*******" value="staff@123" required="required">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">ADD</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
