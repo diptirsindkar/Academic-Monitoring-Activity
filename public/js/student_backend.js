@@ -3,6 +3,11 @@ $(document).ready(function () {
     $.ajax({
         url: "users/get_dummy",
         success: function (result) {
+            console.log(result);
+            if(result === ""){
+                alert('Something went wrong, Please Login again');
+                window.location= '/';
+            }
             $('span[data="stu_id"]').html(result.id);
             $('span[data="stu_email"]').html(result.email);
             $('span[data="stu_fname"]').html(result.fname);
