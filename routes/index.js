@@ -134,6 +134,7 @@ router.post('/login', function (req, res, next) {
 
 router.get('/logout', function (req, res, next) {
     req.session.user = false;
+    req.session.student = null;
     res.redirect('/');
 });
 
