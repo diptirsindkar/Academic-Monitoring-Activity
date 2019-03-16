@@ -3,7 +3,6 @@ $(document).ready(function () {
     $.ajax({
         url: "users/get_dummy",
         success: function (result) {
-            console.log(result);
             $('span[data="stu_id"]').html(result.id);
             $('span[data="stu_email"]').html(result.email);
             $('span[data="stu_fname"]').html(result.fname);
@@ -17,6 +16,15 @@ $(document).ready(function () {
             $('span[data="stu_year"]').html(result.year);
          }
     });
+
+    $.ajax({
+        url: "/get_report",
+        success: function (report) {
+            $('span[data="report_month"]').html(report[0].month);
+            console.log(report[0].month);
+         }
+    });
+
 });
 
 
