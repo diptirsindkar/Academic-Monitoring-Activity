@@ -4,10 +4,10 @@ $(document).ready(function () {
         url: "users/get_dummy",
         success: function (student) {
             console.log(student);
-            if(student === ""){
-                alert('Something went wrong, Please Login again');
-                window.location= '/';
-            }
+            // if(student === ""){
+            //     alert('Something went wrong, Please Login again');
+            //     window.location= '/';
+            // }
             $('span[data="stu_id"]').html(student.id);
             $('span[data="stu_email"]').html(student.email);
             $('span[data="stu_fname"]').html(student.fname);
