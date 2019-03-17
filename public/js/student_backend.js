@@ -27,16 +27,37 @@ $(document).ready(function () {
         success: function (report) {
             $('span[data="report_month"]').html(report[0].month);
             $('span[data="report_total_days"]').html(report[0].total_days);
-            $('span[data="report_ut1"]').html(report[0].total_ut1);
-            $('span[data="report_ut2"]').html(report[0].total_ut2);
+            $('span[data="report_ut1"]').html(report[0].ut1);
+            $('span[data="report_ut2"]').html(report[0].ut2);
             $('span[data="report_present"]').html(report[0].present);
             $('span[data="report_absent"]').html(report[0].total_days - report[0].present);
             $('span[data="report_leave_taken"]').html(report[0].leave_taken);
             $('span[data="report_avrage"]').html(Math.floor(report[0].present / report[0].total_days * 100));
             $('span[data="report_absent"]').html(Math.floor(report[0].present / report[0].total_days * 100));
             $('span[data="report_complain"]').html(Math.floor(report[0].present / report[0].total_days * 100));
+
+
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1000
+            });
+            var width = $(".skills.html").text();
+            $(".skills.html").css({
+                "width": width
+            });
+            var width2 = $(".skills.css").text();
+            $(".skills.css").css({
+                "width": width2
+            });
+            var width3 = $(".skills.js").text();
+            $(".skills.js").css({
+                "width": width3
+            });
          }
     });
+
+
+    
 
 });
 

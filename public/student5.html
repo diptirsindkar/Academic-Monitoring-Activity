@@ -42,6 +42,7 @@
             border: 0;
         }
     </style>
+    
 </head>
 
 <body>
@@ -202,17 +203,17 @@
                                         </div>
                                     </div>
 
-                                    <p class="average">LEAVE</p>
+                                    <p class="average">UNIT TEST 1 AVERAGE</p>
                                     <div class="container1">
                                         <div class="skills css">
-                                            <span data="report_absent">80</span>%
+                                            <span data="report_ut1">80</span>%
                                         </div>
                                     </div>
 
-                                    <p class="average">COMPLAIN</p>
+                                    <p class="average">UNIT TEST 2 AVERAGE</p>
                                     <div class="container1">
                                         <div class="skills js">
-                                            <span data="report_complain">65</span>%
+                                            <span data="report_ut2">65</span>%
                                         </div>
                                     </div>
 
@@ -860,6 +861,7 @@
                 </div>
 
                 <!-------------------js libraries--------------------------->
+                
                 <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
                 <script src="js/bootstrap.min.js"></script>
                 <script src="contactform/contactform.js"></script>
@@ -870,29 +872,11 @@
                 <script src="js/locales/en.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
-                <script src="/js/student_backend.js"></script>
+                
                 <script src="./js/waypoints.min.js"></script>
                 <script src="./js/jquery.counterup.min.js"></script>
-                <script>
-                    jQuery(document).ready(function () {
-                        $('.counter').counterUp({
-                            delay: 10,
-                            time: 1000
-                        });
-                        var width = $(".skills.html").text();
-                        $(".skills.html").css({
-                            "width": width
-                        });
-                        var width2 = $(".skills.css").text();
-                        $(".skills.css").css({
-                            "width": width2
-                        });
-                        var width3 = $(".skills.js").text();
-                        $(".skills.js").css({
-                            "width": width3
-                        });
-                    });
-                </script>
+                <script src="/js/student_backend.js"></script>
+                
 
                 <script>
                     $("p").load(function () {
