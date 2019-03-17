@@ -443,7 +443,7 @@ border: 1px solid rgba(0, 0, 0, 0.07);
 .months{
   border: 1px solid #cccccc;
   background-color: white;
-  color: black;
+  color: #cccccc;
   text-transform: uppercase;
 }
 .months:focus{
@@ -454,7 +454,7 @@ border: 1px solid rgba(0, 0, 0, 0.07);
 .leave_taken{
   border: 1px solid #cccccc;
   background-color: white;
-  color: black;
+  color: #cccccc;
   text-transform: uppercase;
 }
 .send_form{
