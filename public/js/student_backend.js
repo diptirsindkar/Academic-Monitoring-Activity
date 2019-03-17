@@ -41,6 +41,18 @@ $(document).ready(function () {
 });
 
 
+var noti = ['<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">NEWS1</a></h4></div><div id="collapse1" class="panel-collapse collapse in"><div class="panel-body">description</div></div></div>','<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">NEWS1</a></h4></div><div id="collapse1" class="panel-collapse collapse in"><div class="panel-body">description</div></div></div>'];
+
+for(let i = 0 ; i<noti.length ; i++){
+    $("#accordion").append(noti[i]);
+}
+
+
+
+
+                                        
+
+
 
 
 
