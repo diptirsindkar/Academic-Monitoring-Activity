@@ -606,120 +606,55 @@
                   <div class="abc1">
                     <p class="content4">Student Report</p>
                     <form>
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div class="form-group">
-
-                            <div class="sel">
-                              <label style="margin-left:10px">Branch:</label>
-                              <select required style="margin-right:10px">
-                                <option class="opt" value="select">Select</option>
-                                <option class="opt" value="Comp">Computer </option>
-                                <option class="opt" value="Mech">Mechanical </option>
-                                <option class="opt" value="Extc">Electrical</option>
-                                <option class="opt" value="Etrx">Electronic</option>
-                              </select>
-                              <label style="margin-left:10px">Sem:</label>
-                              <select required style="margin-right:10px">
-                                <option class="opt" value="select">Select</option>
-                                <option class="opt" value="1st">1st </option>
-                                <option class="opt" value="2nd">2nd </option>
-                                <option class="opt" value="3rd">3rd </option>
-                                <option class="opt" value="4th">4th </option>
-                                <option class="opt" value="5th">5th </option>
-                                <option class="opt" value="6th">6th </option>
-                                <option class="opt" value="7th">7th </option>
-                                <option class="opt" value="8th">8th </option>
-                              </select>
-                              <label style="margin-left:10px">Division:</label>
-                              <select required style="margin-right:10px">
-                                <option class="opt" value="select">Select</option>
-                                <option class="opt" value="A">A</option>
-                                <option class="opt" value="B">B</option>
-                              </select>
-                              <label style="margin-left:10px">Month:</label>
-                              <select required style="margin-right:10px">
-                                <option class="opt" value="select">Select</option>
-                                <option class="opt" value="jan">january</option>
-                                <option class="opt" value="feb">february </option>
-                                <option class="opt" value="mar">march</option>
-                                <option class="opt" value="apr">april</option>
-                                <option class="opt" value="may">may</option>
-                                <option class="opt" value="jun">june </option>
-                                <option class="opt" value="jul">july </option>
-                                <option class="opt" value="aug">august </option>
-                                <option class="opt" value="sep">september</option>
-                                <option class="opt" value="oct">october </option>
-                                <option class="opt" value="nov">november</option>
-                                <option class="opt" value="dec">december</option>
-                              </select>
-                            </div>
-                            <button type="button" class="btn  btn-fill pull-right" id="show2">Select</button>
-                          </div>
-                        </div>
-                      </div>
+                      <div class="form-group">
+                      <label>Month:</label>
+                      <select class="months">
+                        <option>january</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>june</option>
+                        <option>july</option>
+                        <option>August</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Student ID:</label>
+                      <input type="text" class="form-control" placeholder="stu_id" name="id" required>
+                    </div>
+                    <div class="form-group">
+                      <label>UT1</label>
+                      <input type="text"  class="form-control" placeholder="UT1" name="ut1"quired>
+                    </div> 
+                    <div class="form-group">
+                      <label>UT2</label>
+                      <input type="text" class="form-control"  placeholder="UT2" name="ut2" required> 
+                    </div>
+                    <div class="form-group">
+                      <label>Total Days</label>
+                      <input type="text" class="form-control"  placeholder="Days" name="total_days" required> 
+                    </div>
+                    <div class="form-group">
+                      <label>Present</label>
+                      <input type="text" class="form-control"  placeholder="present" name="present" required> 
+                    </div>
+                    <div class="form-group">
+                      <label  >Leave taken</label>
+                      <input type="text" class="leave_taken"  placeholder="leave" name="leave_taken"required> 
+                    </div>
+                    <input type="submit" value="Send" class="send_form">
                     </form>
+                    <div class="clearfix"></div>
                   </div>
+                  
                 </div>
-                <div class="col-sm-12" id="form3" style="display:none">
-                  <div class="abc1">
-                    <div class="row">
-                      <div class="col-sm-10">
-                        <p class="content4">Student Report</p>
-                      </div>
-
-                      <div class="col-sm-2">
-                        <div class="form-group">
-                          <button style="font-size:14px;width: 100%;margin-left: 2px;">Send<i class="fa fa-send"
-                              style="font-size: 16px"></i></button>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <table class="table table-striped">
-                        <thead>
-                          <tr>
-                            <th>Student Name</th>
-                            <th>Unit Test 1</th>
-                            <th>Unit Test 2</th>
-                            <th>working days</th>
-                            <th>Prsent days</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>John</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>Mary</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>July</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                        </tbody>
-                      </table>
-
-                    </div>
-
-                  </div>
-                </div>
-
-
-              </div>
-            </div>
-
+                
+                
             <!----------------------------leave content-------------------------------------->
 
             <div id="Leave" class="tab-pane fade">
