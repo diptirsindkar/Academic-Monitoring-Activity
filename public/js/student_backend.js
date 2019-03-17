@@ -32,7 +32,7 @@ $(document).ready(function () {
             $('span[data="report_present"]').html(report[0].present);
             $('span[data="report_absent"]').html(report[0].total_days - report[0].present);
             $('span[data="report_leave_taken"]').html(report[0].leave_taken);
-            $('span[data="report_avrage"]').html(report[0].present / report[0].total_days * 100);
+            $('span[data="report_avrage"]').html(Math.floor(report[0].present / report[0].total_days * 100));
          }
     });
 
