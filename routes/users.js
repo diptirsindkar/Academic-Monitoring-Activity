@@ -33,6 +33,13 @@ router.get('/get_student', function (req, res) {
   get_data(url, "ama", "student", display_stu);
 });
 
+router.get('/get_staff', function (req, res) {
+  function display_stu(student) {
+    res.send(student)
+  }
+  get_data(url, "ama", "staff", display_stu);
+});
+
 router.post('/add_student', function (req, res) {
   insert_data(url, "ama", "student", req.body);
   console.log(req.body);
