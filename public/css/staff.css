@@ -744,7 +744,7 @@ background-color: #ffcc80;
 /*------------copyright---------------------*/
 
 .topnav {
-  overflow: hidden;
+  overflow: hidden;  
   background-color: white;
 }
 
@@ -763,6 +763,8 @@ background-color: #ffcc80;
   color: #ffcc80;
 }
 
+
+
 /*-----------------print------------------------*/
 button, input, select, textarea{
     border-radius: 4px;
@@ -776,6 +778,11 @@ button, input, select, textarea{
 .collcontent{
     margin-left:260px;
 }
+
+.collcontent2{
+  margin-left: 260px;
+}
+
 
 /*--------------------------------------------------------------------------------------------*/
 /*@media (max-width: 991px)
