@@ -19,33 +19,30 @@ router.post('/stu_login', function (req, res, next) {
 });
 
 router.post('/sta_login', function (req, res) {
-  res.redirect("/staff.html");
-});
-
-router.get('/get_dummy', function (req, res) {
-  res.send(req.session.student);
+  get_data(url, "ama", "staff", staff_login,{"id":req.body.username});
+  function staff_login(result){
+    console.log(result);
+    if(result[0].password == req.body.password){
+      req.session.staff = result[0];
+      res.redirect("/staff.html");
+    }else{
+      res.redirect("/");
+    }
+  }
 });
 
 router.get('/get_student', function (req, res) {
-  function display_stu(student) {
-    res.send(student)
-  }
-  get_data(url, "ama", "student", display_stu);
+  res.send(req.session.student);
 });
 
 router.get('/get_staff', function (req, res) {
-  function display_stu(student) {
-    res.send(student)
-  }
-  get_data(url, "ama", "staff", display_stu);
+  res.send(req.session.staff);
 });
 
 router.post('/add_student', function (req, res) {
   insert_data(url, "ama", "student", req.body);
   console.log(req.body);
 });
-
-
 
 
 

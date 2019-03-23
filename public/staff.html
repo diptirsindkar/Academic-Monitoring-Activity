@@ -49,7 +49,7 @@
     <div class="sidebar">
       <ul class="nav nav-tabs">
         <div class="hstudent"><a href="#student" data-toggle="tab">
-            <p>staff</p>
+            <p><span data="staff_id"></span></p>
           </a></div>
         <li class="active li"><a data-toggle="tab" href="#dashboard"><i class="pe-7s-graph"
               style="font-size:28px"></i>Home</a></li>
@@ -87,8 +87,9 @@
               <li><a href="#"><i class="fa fa-search" style="font-size:19px"></i></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#"> Account</a></li>
-              <li><a href="#">Logout</a></li>
+              <li><a href="#">Welcome <span data="staff_fname"></span>...</a></li>
+              <li><a href="/#student" data-toggle="tab"> Account</a></li>
+              <li><a href="/logout">Logout</a></li>
             </ul>
           </div>
         </div>
@@ -106,20 +107,21 @@
                   <div class="col-sm-6">
                     <div class="content3">
                       <p class="content4">Leave & Complain Status</p>
+                      <div id="wait3"><img src="img/loader3.gif" alt="" style="height: 400px;width: 500px;"></div>
                       <p class="ftext">24 hours performance</p>
                       <p>AVERAGE</p>
                       <div class="container1">
-                        <div class="skills html">90%</div>
+                        <div class="skills html"><span data="report_avrage"></span>%</div>
                       </div>
 
                       <p class="average">LEAVE</p>
                       <div class="container1">
-                        <div class="skills css">80%</div>
+                        <div class="skills css"><span data="report_leave_taken"></span></div>
                       </div>
 
-                      <p class="average">COMPLAIN</p>
+                      <p class="average">ABSENT</p>
                       <div class="container1">
-                        <div class="skills js">65%</div>
+                        <div class="skills js"><span data="report_absent"></span></div>
                       </div>
 
                       <p class="updated"><i class='far fa-clock' style='font-size:14px'></i>updated 3 minutes ago</p>
@@ -131,101 +133,8 @@
                       <p class="content4">News and Events</p>
                       <p class="ftext">24 hours performance</p>
                       <div class="panel-group" id="accordion">
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h4 class="panel-title">
-                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">NEWS 1</a>
-                            </h4>
-                          </div>
-                          <div id="collapse1" class="panel-collapse collapse in">
-                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                              veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-                          </div>
-                        </div>
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h4 class="panel-title">
-                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">NEWS 2</a>
-                            </h4>
-                          </div>
-                          <div id="collapse2" class="panel-collapse collapse">
-                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                              veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-                          </div>
-                        </div>
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h4 class="panel-title">
-                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">NEWS 3</a>
-                            </h4>
-                          </div>
-                          <div id="collapse3" class="panel-collapse collapse">
-                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                              veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-                          </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h4 class="panel-title">
-                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">NEWS 4</a>
-                            </h4>
-                          </div>
-                          <div id="collapse4" class="panel-collapse collapse">
-                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                              veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-                          </div>
-                        </div>
+                        <div id="wait2" style="height: 300px"><img src="img/loader2.gif" alt=""></div>
                       </div>
-
-                      <div class="tickbox">
-                        <input type="checkbox" name="vehicle1" value="Bike">
-                        Sign contract for "What are conference organizers afraid of?
-                        <!-- <div class="td-actions text-right">-->
-                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs"
-                          style="margin-left: 40px">
-                          <i class="fa fa-edit"></i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                          <i class="fa fa-times"></i>
-                        </button>
-                      </div>
-
-                      <div class="tickbox">
-                        <input type="checkbox" name="vehicle1" value="Bike">
-                        Sign contract for "What are conference organizers afraid of?
-                        <!-- <div class="td-actions text-right">-->
-                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs"
-                          style="margin-left: 40px">
-                          <i class="fa fa-edit"></i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                          <i class="fa fa-times"></i>
-                        </button>
-                      </div>
-
-                      <div class="tickbox">
-                        <input type="checkbox" name="vehicle1" value="Bike">
-                        Sign contract for "What are conference organizers afraid of?
-                        <!-- <div class="td-actions text-right">-->
-                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs"
-                          style="margin-left: 40px">
-                          <i class="fa fa-edit"></i>
-                        </button>
-                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                          <i class="fa fa-times"></i>
-                        </button>
-                      </div>
-
-
                       <p class="updated"><i class='far fa-clock' style='font-size:14px'></i>updated 3 minutes ago</p>
 
                     </div>
@@ -605,7 +514,7 @@
                 <div class="col-sm-12" id="form2">
                   <div class="abc1">
                     <p class="content4">Student Report</p>
-                    <form>
+                    <form action="/add_report" method="POST">
                     <div class="col-sm-5" style="width:100%"> 
                       <div class="form-group">
                       <label>Month:</label>
@@ -973,6 +882,10 @@
         </footer>
     </div>
 
+    <div id="wait" style="    position: absolute;top: 0;left: 0;height: 100vh;width: 100%;background: #fff;">
+    <img src="img/loader1.gif" alt="" style="margin: 183px 34%;">
+    </div>
+
 
         
 
@@ -992,9 +905,12 @@
       <script src="contactform/contactform.js"></script>
       <script src="js/main.js"></script>
       <script src="js/typer.js"></script>
-      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       <script src="js/locales/en.js"></script>
+      <script src="js/jquery.scrollbox.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/wmh/jquery-scrollbox@1.4.2/jquery.scrollbox.min.js"></script>
+
+      <script src="js/staff_backend.js"></script>
       <script
         src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"

@@ -6,48 +6,8 @@ var assert = require('assert');
 var url = 'mongodb+srv://root:root@ama-ylzfp.mongodb.net/test?retryWrites=true';
 const nodemailer = require("nodemailer");
 
-router.get('/index.html', function (req, res) {
-    res.render('index', { title: "home" });
-});
 
-router.post('/admin', function (req, res) {
-    
-  });
-  
-router.get('/insert', function (req, res) {
-    res.render('insert', { title: "insert" });
-});
 
-router.get('/chat', function (req, res) {
-    res.render('admin/chat', { title: "ChatApp" });
-});
-
-router.get('/get-data', function (req, res, next) {
-
-    res.send(get_data(url, "ama", "stu"));
-
-    // res.json("hiii");
-});
-
-router.post('/insert', function (req, res, next) {
-    var item = {
-        title: req.body.title,
-        content: req.body.content,
-        author: req.body.author
-    };
-
-    mongo.connect(url, function (err, db) {
-        if (err) throw err;
-        var dbo = db.db("ama");
-        dbo.collection("stu").insertOne(item, function (err, res) {
-            if (err) throw err;
-            console.log("1 document inserted");
-            db.close();
-        });
-    });
-
-    res.redirect('/exe');
-});
 
 router.post('/update', function (req, res, next) {
     var item = {
@@ -134,6 +94,8 @@ router.post('/login', function (req, res, next) {
 router.get('/logout', function (req, res, next) {
     req.session.user = false;
     req.session.student = null;
+    req.session.staff = null;
+    req.session.admin = null;
     res.redirect('/');
 });
 
@@ -142,18 +104,30 @@ router.get('/get_notification', function (req, res, next) {
 });
 
 router.post('/add_notification', function (req, res, next) {
-    console.log(req.body);
     insert_data(url, 'ama', 'noti', req.body);
     res.redirect("add-data.html");
 });
 
-router.get('/get_report', function (req, res, next) {
+router.post('/add_report', function (req, res, next) {
+    insert_data(url, 'ama', 'report', req.body);
+    res.redirect("staff.html");
+});
+
+router.get('/get_report_stu', function (req, res, next) {
     var student = req.session.student.id;
-    console.log(student);
     function report(report){
         res.send(report);
     }
     get_data(url, 'ama', 'report',report,{"id":student})
+    
+});
+
+router.get('/get_report_sta', function (req, res, next) {
+    var staff = req.session.staff.id;
+    function report(report){
+        res.send(report);
+    }
+    get_data(url, 'ama', 'report',report,{"id":staff})
     
 });
 
