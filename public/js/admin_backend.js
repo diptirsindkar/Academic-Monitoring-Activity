@@ -1,7 +1,7 @@
 // student get profile
 function stu_dir() {
     $.ajax({
-        url: "/users/get_student",
+        url: "/users/get_student_dir",
         success: function (student) {
             var wall = $('#profile-well');
             student.forEach(stu => {
@@ -26,7 +26,7 @@ function stu_dir() {
 }
 function staff_dir() {
     $.ajax({
-        url: "/users/get_staff",
+        url: "/users/get_staff_dir",
         success: function (staff) {
             var wall = $('#profile-well');
             staff.forEach(staff => {
