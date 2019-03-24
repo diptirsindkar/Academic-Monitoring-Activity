@@ -3,46 +3,72 @@ var router = express.Router();
 var mongo = require('mongodb').MongoClient;
 var objectId = require('mongodb').ObjectID;
 var url = 'mongodb+srv://root:root@ama-ylzfp.mongodb.net/test?retryWrites=true';
+var multer = require('multer');
+
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/img/uploads')
+  },
+  filename: function (req, file, cb) {
+    cb(null, req.session.staff.id+ ".jpg")
+  }
+})
+
+var upload = multer({ storage: storage });;
+
 
 /* GET users listing. */
 router.post('/stu_login', function (req, res, next) {
-  get_data(url, "ama", "student", stu_login,{"id":req.body.username});
-  function stu_login(result){
+  get_data(url, "ama", "student", stu_login, {
+    "id": req.body.username
+  });
+
+  function stu_login(result) {
     console.log(result);
-    if(result[0].password == req.body.password){
+    if (result[0].password == req.body.password) {
       req.session.student = result[0];
       res.redirect("/student5.html");
-    }else{
+    } else {
       res.redirect("/");
     }
   }
 });
 
 router.post('/sta_login', function (req, res) {
-  get_data(url, "ama", "staff", staff_login,{"id":req.body.username});
-  function staff_login(result){
+  get_data(url, "ama", "staff", staff_login, {
+    "id": req.body.username
+  });
+
+  function staff_login(result) {
     console.log(result);
-    if(result[0].password == req.body.password){
+    if (result[0].password == req.body.password) {
       req.session.staff = result[0];
       res.redirect("/staff.html");
-    }else{
+    } else {
       res.redirect("/");
     }
   }
+});
+router.post('/upload_images', upload.single('myfile'), function (req, res) {
+  console.log("file uploaded");
+ res.redirect("/staff.html");
+
 });
 
 router.get('/get_student', function (req, res) {
   res.send(req.session.student);
 });
 router.get('/get_student_dir', function (req, res) {
-  get_data(url, "ama", "student", dir,{});
-  function dir(result){
+  get_data(url, "ama", "student", dir, {});
+
+  function dir(result) {
     res.send(result);
   }
 });
 router.get('/get_staff_dir', function (req, res) {
-  get_data(url, "ama", "staff", dir,{});
-  function dir(result){
+  get_data(url, "ama", "staff", dir, {});
+
+  function dir(result) {
     res.send(result);
   }
 });
@@ -61,13 +87,13 @@ router.post('/add_student', function (req, res) {
 
 var get_data = function (url, db_name, collection, fun, query) {
   mongo.connect(url, function (err, db) {
+    if (err) throw err;
+    var dbo = db.db(db_name);
+    dbo.collection(collection).find(query).toArray(function (err, result) {
       if (err) throw err;
-      var dbo = db.db(db_name);
-      dbo.collection(collection).find(query).toArray(function (err, result) {
-          if (err) throw err;
-          db.close();
-          fun(result);
-      });
+      db.close();
+      fun(result);
+    });
   });
 };
 

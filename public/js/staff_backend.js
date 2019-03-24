@@ -13,15 +13,14 @@ $.ajax({
         $('span[data="staff_id"]').html(staff.id);
         $('span[data="staff_email"]').html(staff.email);
         $('span[data="staff_fname"]').html(staff.fname);
-        $('span[data="staff_lname"]').html(staff.id);
-        $('span[data="staff_mname"]').html(staff.id);
-        $('span[data="staff_momname"]').html(staff.id);
+        $('span[data="staff_lname"]').html(staff.lname);
+        $('span[data="staff_mname"]').html(staff.mname);
         $('span[data="staff_address"]').html(staff.address);
         $('span[data="staff_city"]').html(staff.city);
         $('span[data="staff_number"]').html(staff.number);
         $('span[data="staff_department"]').html(staff.department);
         $('span[data="staff_year"]').html(staff.post);
-        $('span[data="staff_profile"]').html(staff.profile);
+        $('span[data="staff_profile"]').html(`<img src="img/uploads/${staff.profile}" class="img-responsive center" style="border-radius: 50%;"alt="avtar"></img>`);
     }
 });
 

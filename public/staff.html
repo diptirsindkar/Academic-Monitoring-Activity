@@ -330,21 +330,21 @@
                   <div class="col-md-4">
                     <div class="card5">
                       <img src="img/1200345bdcd463d7b58400.jpg" alt="building" class="img-responsive">
-                      <form action="/upload_image" method="post">
+                      <form action="/users/upload_images" enctype="multipart/form-data" method="post">
                         <div class="bg-img">
-                          <img src="img/avtar.jpg" class="img-responsive center" alt="avtar">
+                          <span data="staff_profile"></span>
                           <div class="file">
                             <label class="btn-bs-file btn btn-lg btn-default">
                               <i class="fa fa-camera" style='font-size:20px'></i>
-                              <input type="file" />
+                              <input type="file" name="myfile"/>
                             </label>
                           </div>
                         </div>
+                        <button type="submit">upload</button>
                       </form>
-                      <h2 style="text-align: center">Jhon Deo</h2>
-                      <p style="font-size:16.5px;color:#9A9A9A;text-align: center">Jhondeo24 </p>
-                      <p style="text-align:center;font-size:14px;padding-bottom: 50px">"Lamborghini Mercy<br> Your chick
-                        she so thirsty<br> I'm in that two seat Lambo"</p>
+                      <h2 style="text-align: center"><span data="staff_fname"></span> <span data="staff_lname"></span></h2>
+                      <p style="font-size:16.5px;color:#9A9A9A;text-align: center"><span data="staff_email"></span> </p>
+                      <p style="text-align:center;font-size:14px;padding-bottom: 50px"><span data="staff_address"></span></p>
                       <div class="container-fluid icons">
                         <div class="border"></div>
                         <i class="fa fa-facebook-square" style="font-size:15px;padding:10px;color:#9A9A9A"></i>
