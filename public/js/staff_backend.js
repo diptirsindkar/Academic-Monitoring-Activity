@@ -54,7 +54,7 @@ $.ajax({
 $.ajax({
     url: "/get_notification",
     success: function (noti) {
-        for (let i = 0; i < noti.length; i++) {
+        for (let i = noti.length-1; i >=0; i--) {
             $("#accordion").append(`<div class="panel panel-default post">
             <div class="panel-heading">
             <h4 class="panel-title">
