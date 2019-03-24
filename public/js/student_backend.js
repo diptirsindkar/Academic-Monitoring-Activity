@@ -25,6 +25,8 @@ $.ajax({
         $('span[data="stu_number"]').html(student.number);
         $('span[data="stu_department"]').html(student.department);
         $('span[data="stu_year"]').html(student.year);
+        $('span[data="stu_profile"]').html(`<img src="img/uploads/${student.profile}" class="img-responsive center" style="border-radius: 50%;"alt="avtar"></img>`);
+    
 
 
         $("#wait").css("display", "none");

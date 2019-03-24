@@ -5,7 +5,7 @@ var objectId = require('mongodb').ObjectID;
 var url = 'mongodb+srv://root:root@ama-ylzfp.mongodb.net/test?retryWrites=true';
 var multer = require('multer');
 
-var storage = multer.diskStorage({
+var storage1 = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'public/img/uploads')
   },
@@ -13,8 +13,17 @@ var storage = multer.diskStorage({
     cb(null, req.session.staff.id+ ".jpg")
   }
 })
+var storage2 = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/img/uploads')
+  },
+  filename: function (req, file, cb) {
+    cb(null, req.session.student.id+ ".jpg")
+  }
+})
 
-var upload = multer({ storage: storage });;
+var upload_staff = multer({ storage: storage1 });;
+var upload_stu = multer({ storage: storage2 });;
 
 
 /* GET users listing. */
@@ -49,10 +58,13 @@ router.post('/sta_login', function (req, res) {
     }
   }
 });
-router.post('/upload_images', upload.single('myfile'), function (req, res) {
+router.post('/upload_images_staff', upload_staff.single('myfile'), function (req, res) {
   console.log("file uploaded");
  res.redirect("/staff.html");
-
+});
+router.post('/upload_images_stu', upload_stu.single('myfile'), function (req, res) {
+  console.log("file uploaded");
+ res.redirect("/student5.html");
 });
 
 router.get('/get_student', function (req, res) {
