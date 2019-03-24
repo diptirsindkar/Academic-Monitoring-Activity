@@ -255,56 +255,6 @@
                         </div>
                     </div>
                 </div>
-                <!-----------------------chatbox-------------------------------->
-
-                <button class="open-button" onclick="openForm()">
-                    <i class='fas fa-comment-alt' style='font-size:20px;color:white'></i>
-                </button>
-
-                <div class="chat-popup" id="myForm">
-                    <form action="/action_page.php" class="form-container" style="position: relative;">
-                        <h1 style="display: inline-block;">Chat</h1>
-
-                        <label for="msg">
-                            <b>Message</b>
-                        </label>
-                        <textarea placeholder="Type message.." name="msg" required="required"></textarea>
-
-                        <button type="submit" class="btn">
-                            <i class='fas fa-paper-plane' style='font-size:25px;color:white'></i>
-                        </button>
-                        <button type="button" class="btn cancel" onclick="closeForm()" style="position: absolute;display: inline-block;
-    background-color: #ffffff;
-    color: black;
-    height: 21px;
-    top: 0;
-    width: 10%;
-    right: 0px;
-    margin-left: -6px;
-    margin-right: 0px;
-    margin-top: 0px;
-    margin-left: 0px;
-    padding: 0px;
-    border-radius: 0px;">&times;</button>
-                    </form>
-                </div>
-
-                <script>
-                    function openForm() {
-                        document
-                            .getElementById("myForm")
-                            .style
-                            .display = "block";
-                    }
-
-                    function closeForm() {
-                        document
-                            .getElementById("myForm")
-                            .style
-                            .display = "none";
-                    }
-                </script>
-
                 <!-------------------PROFILecontent-------------------------------------->
                 <div id="student" class="tab-pane fade">
                     <div class="collcontent2">
@@ -315,18 +265,12 @@
                                     <p class="collcontent4">Edit Profile</p>
                                     <form>
                                         <div class="row">
-                                            <div class="col-md-5">
-                                                <div class="form-group">
-                                                    <label>database-id (disabled)</label>
-                                                    <input type="text" class="form-control" disabled="disabled"
-                                                        placeholder="Company" value="IDBCOE11">
-                                                </div>
-                                            </div>
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label>student-id</label>
-                                                    <input type="text" class="form-control" disabled="disabled"
-                                                        placeholder="Username" value="IDIETES11">
+                                                    <span data="stu_id" style="display: block;
+                                                    font-size: 18px;
+                                                    line-height: 45px;"></span>
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
@@ -510,16 +454,20 @@
                                             <div class="file">
                                                 <label class="btn-bs-file btn btn-lg btn-default">
                                                     <i class="fa fa-camera" style='font-size:20px'></i>
-                                                    <input type="file" name="myfile"/>
+                                                    <input type="file" name="myfile" />
                                                 </label>
                                             </div>
                                         </div>
-                                        <button type="submit">Upload</button>
+                                        <button type="submit" style="margin: 0 auto;
+                                        display: block;">Upload</button>
                                     </form>
-                                    <h2 style="text-align: center"><span data="stu_fname"></span> <span data="stu_lname"></span></h2>
-                                    <p style="font-size:16.5px;color:#9A9A9A;text-align: center"><span data="stu_email"></span>
+                                    <h2 style="text-align: center"><span data="stu_fname"></span> <span
+                                            data="stu_lname"></span></h2>
+                                    <p style="font-size:16.5px;color:#9A9A9A;text-align: center"><span
+                                            data="stu_email"></span>
                                     </p>
-                                    <p style="text-align:center;font-size:14px;padding-bottom: 50px"><span data="stu_address"></span></p>
+                                    <p style="text-align:center;font-size:14px;padding-bottom: 50px"><span
+                                            data="stu_address"></span></p>
                                     <div class="container-fluid icons">
                                         <div class="border"></div>
                                         <i class="fa fa-facebook-square"
@@ -536,7 +484,6 @@
                     </div>
                 </div>
                 <!----------------------------leavecontent------------------------>
-
                 <div id="Leave" class="tab-pane fade">
                     <div class="collcontent2">
 
@@ -546,25 +493,16 @@
                                 <form id="student_leave">
 
                                     <div class="row">
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label>database-id (disabled)</label>
-                                                <input type="text" class="form-control" disabled="disabled"
-                                                    placeholder="Company" value="IDBCOE11">
-                                            </div>
-                                        </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>student-id</label>
-                                                <input type="text" class="form-control" disabled="disabled"
-                                                    placeholder="Username" value="IDIETES11">
+                                                <span data="stu_id"></span>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>name</label>
-                                                <input type="text" class="form-control" disabled="disabled"
-                                                    placeholder="Nilesh Yadav" required="required">
+                                                <span data="stu_fname"></span> <span data="stu_lname"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -623,9 +561,7 @@
                         </div>
                     </div>
                 </div>
-
                 <!----------------------------complaincontent--------------------------->
-
                 <div id="Complain" class="tab-pane fade">
                     <div class="collcontent2">
 
@@ -635,25 +571,23 @@
                                 <form id="leave_student">
 
                                     <div class="row">
-                                        <div class="col-md-5">
+                                        <!-- <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>database-id (disabled)</label>
                                                 <input type="text" class="form-control" disabled="disabled"
                                                     placeholder="Company" value="IDBCOE11">
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>student-id</label>
-                                                <input type="text" class="form-control" disabled="disabled"
-                                                    placeholder="Username" value="IDIETES11">
+                                                <span data="stu_id"></span>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>name</label>
-                                                <input type="text" class="form-control" disabled="disabled"
-                                                    placeholder="Nilesh Yadav" required="required">
+                                                <span data="stu_fname"></span> <span data="stu_lname"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -685,9 +619,9 @@
                                         </div>
                                     </div>
 
-                                    
+
                                     <div class="row">
-                                        <button type="submit" class="btn btn-info btn-fill pull-right" >send</button>
+                                        <button type="submit" class="btn btn-info btn-fill pull-right">send</button>
                                     </div>
 
                                 </form>
@@ -695,9 +629,7 @@
                         </div>
                     </div>
                 </div>
-
                 <!----------------------------time-table---------------------------------->
-
                 <div id="timetable" class="tab-pane fade">
                     <div class="collcontent6">
                         <div class="col-sm-11">
@@ -808,112 +740,106 @@
                         </div>
                     </div>
                 </div>
-
-
                 <!----------------copyright--------------------------->
-
                 <div class="collcontent2">
-                    <footer class="footer">
-                        <div class="topnav">
-                            <a class="active" href="#home">Home</a>
-                            <a href="#news">News</a>
-                            <a href="#contact">Contact</a>
-                            <a href="#about">more</a>
-
-                            <p class="copyright pull-right">
-                                <a #>Creative Tim, made with love for a better web</a>
-                            </p>
-
-                        </div>
-
-                    </footer>
-                </div>
+                        <footer class="footer">
+                            <div class="topnav">
+                                <p class="copyright">
+                                    Created by DiNeSh
+                                </p>
+                            </div>
+                        </footer>
+                    </div>
                 <div id="wait"
                     style="    position: absolute;top: 0;left: 0;height: 100vh;width: 100%;background: #fff;">
                     <img src="img/loader1.gif" alt="" style="margin: 183px 34%;">
                 </div>
+                
 
-                <!-------------------js libraries--------------------------->
+            </div>
+        </div>
+    </div>
 
-                <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-                <script src="js/bootstrap.min.js"></script>
-                <script src="contactform/contactform.js"></script>
-                <script src="js/main.js"></script>
-                <script src="js/typer.js"></script>
-                <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-                <script src="js/locales/en.js"></script>
-                <script
-                    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js">
-                </script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+    <!-------------------js libraries--------------------------->
 
-                <script src="./js/waypoints.min.js"></script>
-                <script src="./js/jquery.counterup.min.js"></script>
-                <script src="/js/student_backend.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="contactform/contactform.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/typer.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/locales/en.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+
+    <script src="./js/waypoints.min.js"></script>
+    <script src="./js/jquery.counterup.min.js"></script>
+    <script src="/js/student_backend.js"></script>
 
 
-                <script>
-                    $("p").load(function () {
-                        ("i").hide();
-                    });
-                </script>
+    <script>
+        $("p").load(function () {
+            ("i").hide();
+        });
+    </script>
 
-                <!---------------print page------------>
+    <!---------------print page------------>
 
-                <script>
-                    function printdata(paravalue) {
-                        var fullpagedata = document.body.innerHTML;
-                        var printingData = document
-                            .getElementById(paravalue)
-                            .innerHTML;
-                        document.body.innerHTML = printingData;
-                        window.print();
-                        document.body.innerHTML = fullpagedata;
-                    }
-                </script>
-                <script type="text/javascript">
-                    function getpdfdata() {
-                        var doc = new jsPDF();
-                        doc.fromHTML($('#data').get(0), 10, 10, {
-                            'width': 500
-                        });
-                        doc.save('test.pdf');
-                    }
-                </script>
+    <script>
+        function printdata(paravalue) {
+            var fullpagedata = document.body.innerHTML;
+            var printingData = document
+                .getElementById(paravalue)
+                .innerHTML;
+            document.body.innerHTML = printingData;
+            window.print();
+            document.body.innerHTML = fullpagedata;
+        }
+    </script>
+    <script type="text/javascript">
+        function getpdfdata() {
+            var doc = new jsPDF();
+            doc.fromHTML($('#data').get(0), 10, 10, {
+                'width': 500
+            });
+            doc.save('test.pdf');
+        }
+    </script>
 
-                <!---------------date picker------------>
+    <!---------------date picker------------>
 
-                <script>
-                    $("#date").datepicker();
-                    $("#date1").datepicker();
-                    $("#date2").datepicker();
-                    $("#date3").datepicker();
-                </script>
-                <!---------------------change password------------------>
-                <script>
-                    $(window).load(function () {
-                        $(".trigger_popup_fricc").click(function () {
-                            $('.hover_bkgr_fricc').show();
-                        });
-                        $('.hover_bkgr_fricc').click(function () {
-                            // $('.hover_bkgr_fricc').hide();
-                        });
-                        $('.popupCloseButton').click(function () {
-                            $('.hover_bkgr_fricc').hide();
-                        });
-                    });
-                </script>
-                <script>
-                    $(document).ready(function(){
-                        $('#leave_student').submit(function(){
-                            alert("Application Successfully Send");
-                        });
-                        $('#student_leave').submit(function(){
-                            alert("Application Successfully Send ")
-                        });
-                    });
-                </script>
+    <script>
+        $("#date").datepicker();
+        $("#date1").datepicker();
+        $("#date2").datepicker();
+        $("#date3").datepicker();
+    </script>
+    <!---------------------change password------------------>
+    <script>
+        $(window).load(function () {
+            $(".trigger_popup_fricc").click(function () {
+                $('.hover_bkgr_fricc').show();
+            });
+            $('.hover_bkgr_fricc').click(function () {
+                // $('.hover_bkgr_fricc').hide();
+            });
+            $('.popupCloseButton').click(function () {
+                $('.hover_bkgr_fricc').hide();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#leave_student').submit(function () {
+                alert("Application Successfully Send");
+            });
+            $('#student_leave').submit(function () {
+                alert("Application Successfully Send ")
+            });
+        });
+    </script>
 
 </body>
 
