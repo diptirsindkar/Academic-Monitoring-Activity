@@ -17,9 +17,9 @@ $.ajax({
         $('span[data="stu_id"]').html(student.id);
         $('span[data="stu_email"]').html(student.email);
         $('span[data="stu_fname"]').html(student.fname);
-        $('span[data="stu_lname"]').html(student.id);
-        $('span[data="stu_mname"]').html(student.id);
-        $('span[data="stu_momname"]').html(student.id);
+        $('span[data="stu_lname"]').html(student.lname);
+        $('span[data="stu_mname"]').html(student.mname);
+        $('span[data="stu_momname"]').html(student.momname);
         $('span[data="stu_address"]').html(student.address);
         $('span[data="stu_city"]').html(student.city);
         $('span[data="stu_number"]').html(student.number);
