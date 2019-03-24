@@ -34,6 +34,18 @@ router.post('/sta_login', function (req, res) {
 router.get('/get_student', function (req, res) {
   res.send(req.session.student);
 });
+router.get('/get_student_dir', function (req, res) {
+  get_data(url, "ama", "student", dir,{});
+  function dir(result){
+    res.send(result);
+  }
+});
+router.get('/get_staff_dir', function (req, res) {
+  get_data(url, "ama", "staff", dir,{});
+  function dir(result){
+    res.send(result);
+  }
+});
 
 router.get('/get_staff', function (req, res) {
   res.send(req.session.staff);
