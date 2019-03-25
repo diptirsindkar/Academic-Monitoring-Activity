@@ -524,7 +524,7 @@
                   <div id="home" class="col-sm-8 tab-pane fade in active form">
                     <div class="abc1">
                       <p class="content4">Staff Leave Application</p>
-                      <form>
+                      <form id="staff_leave">
                         <div class="row">
                           <div class="col-md-6">
                             <div class="form-group">
@@ -609,7 +609,7 @@
                   <div id="complain" class="col-sm-8 tab-pane fade in active form">
                     <div class="abc1">
                       <p class="content4">Staff Complain Application</p>
-                      <form>
+                      <form id="staff_complain">
                         <div class="row">
 
                           <div class="col-md-6">
@@ -889,6 +889,22 @@
           });
         });
       </script>
+
+<!-------------------------------------complain n leave alert----------------------->
+
+<script>
+  $(document).ready(function () {
+      $('#staff_leave').submit(function () {
+          alert("Application Successfully Send");
+      });
+      $('#staff_complain').submit(function () {
+          alert("Application Successfully Send ")
+      });
+  });
+</script>
+
+
+
 
 </body>
 
