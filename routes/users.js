@@ -93,6 +93,11 @@ router.post('/add_student', function (req, res) {
   insert_data(url, "ama", "student", req.body);
   console.log(req.body);
 });
+router.post('/add_staff', function (req, res) {
+  insert_data(url, "ama", "staff", req.body);
+  console.log(req.body);
+  res.redirect("/dashboard.html");
+});
 
 
 
