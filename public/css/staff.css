@@ -582,7 +582,7 @@ label{
 }
 
 .profile-btn{
-  margin: 0 160px;
+  margin: 0 140px;
 }
 
 /*--------------------------change password-----------------------------*/
@@ -696,12 +696,6 @@ hr {
 /*----------------------add student--------------------*/
 .opt:hover{
 background-color: #ffcc80;
-}
-.form{
-    
-    align-content: center;
-    margin-left: 160px;
-
 }
 .btn:hover {
     background-color: #ffcc80;
