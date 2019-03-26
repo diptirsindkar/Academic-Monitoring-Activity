@@ -6,7 +6,16 @@ var assert = require('assert');
 var url = 'mongodb+srv://root:root@ama-ylzfp.mongodb.net/test?retryWrites=true';
 
 router.post('/admin_login', function (req, res, next) {
+  get_data(url, "ama", "admin", admin_login,{"id":req.body.username});
+  function admin_login(result){
+    if(result[0].password == req.body.password){
+      req.session.student = result[0];
       res.redirect("/dashboard.html");
+    }else{
+      res.redirect("/");
+    }
+  }
+      
 });
 
 router.get('/get_admin', function (req, res) {
