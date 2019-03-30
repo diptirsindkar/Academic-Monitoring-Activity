@@ -34,6 +34,7 @@
         type="text/css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/pe-icon-7-stroke.css" rel="stylesheet" />
 
@@ -413,27 +414,37 @@
 
                                         <!-- Login Form -->
 
-                                        <form>
-                                            <div class="cform">
-                                                <div class="form-group">
-                                                    <input type="text" placeholder="Old password" class="form-control"
-                                                        required="required">
-                                                </div>
 
-                                                <div class="form-group">
-                                                    <input type="text" placeholder=" New Password" class="form-control"
-                                                        required="required">
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <input type="text" placeholder=" Confirm Password"
-                                                        class="form-control" required="required">
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <input type="submit" value="update password" class="btn"></div>
+                                        <div class="cform">
+                                            <div class="alert alert-success" role="alert" style="display: none" >
+                                                Password has been Changed....
                                             </div>
-                                        </form>
+                                            <div class="alert alert-warning" role="alert" style="display: none" >
+                                                Confirm password does not matched?
+                                            </div>
+                                            <div class="alert alert-danger" role="alert" style="display: none" >
+                                                Old password seems wrong!
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" placeholder="Old password" class="form-control"
+                                                    required="required" name="old_pass">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="password" placeholder=" New Password" class="form-control"
+                                                    required="required" name="new_pass">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="password" placeholder=" Confirm Password" class="form-control"
+                                                    required="required" name="new_pass2">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <button class="btn btn-default btn-lg" id="change_pass">Upadte
+                                                    Password</button>
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -497,7 +508,7 @@
                                             <div class="form-group">
                                                 <label>name</label>
                                                 <p class="input-data">
-                                                <span data="stu_fname" ></span> <span data="stu_lname"></span></p>
+                                                    <span data="stu_fname"></span> <span data="stu_lname"></span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -569,7 +580,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>student-id</label>
-                                                
+
                                                 <span data="stu_id" class="input-data" style="display:block"></span>
                                             </div>
                                         </div>
@@ -577,7 +588,7 @@
                                             <div class="form-group">
                                                 <label>name</label>
                                                 <p class="input-data">
-                                                <span data="stu_fname" ></span> <span data="stu_lname"></span></p>
+                                                    <span data="stu_fname"></span> <span data="stu_lname"></span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -732,19 +743,19 @@
                 </div>
                 <!----------------copyright--------------------------->
                 <div class="collcontent2">
-                        <footer class="footer">
-                            <div class="topnav">
-                                <p class="copyright" style="margin-left:10px">
-                                    Created by Dipti Neha Shweta,made with love for a better web
-                                </p>
-                            </div>
-                        </footer>
-                    </div>
+                    <footer class="footer">
+                        <div class="topnav">
+                            <p class="copyright" style="margin-left:10px">
+                                Created by Dipti Neha Shweta,made with love for a better web
+                            </p>
+                        </div>
+                    </footer>
+                </div>
                 <div id="wait"
                     style="    position: absolute;top: 0;left: 0;height: 100vh;width: 100%;background: #fff;">
                     <img src="img/loader1.gif" alt="" style="margin: 183px 34%;">
                 </div>
-                
+
 
             </div>
         </div>
@@ -797,7 +808,6 @@
             doc.save('test.pdf');
         }
     </script>
-
     <!---------------date picker------------>
 
     <script>

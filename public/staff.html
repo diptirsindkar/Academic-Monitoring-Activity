@@ -244,26 +244,48 @@
                           </div>
                           <div class="box1" id="name">
                             <div class="sandbox"></div>
-                            <div class="box">
-                              <div class="body">
-                                <h5>Change Your Password</h5>
-                                <hr>
-                                <div class="form-group">
-                                  <input type="text" id="username" class="inputbox" name="login"
-                                    placeholder="Old password">
+                            <div class="box" style="background: oldlace">
+                              <div id="formContent">
+                                <!-- Tabs Titles -->
+                                <h4 style="text-transform:uppercase;padding:10px;font-weight:550;text-align: center;">
+                                    Change Your Password
+                                </h4>
+
+                                <!-- Login Form -->
+
+
+                                <div class="cform body">
+                                    <div class="alert alert-success" role="alert" style="display: none" >
+                                        Password has been Changed....
+                                    </div>
+                                    <div class="alert alert-warning" role="alert" style="display: none" >
+                                        Confirm password does not matched?
+                                    </div>
+                                    <div class="alert alert-danger" role="alert" style="display: none" >
+                                        Old password seems wrong!
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" placeholder="Old password" class="form-control"
+                                            required="required" name="old_pass">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="password" placeholder=" New Password" class="form-control"
+                                            required="required" name="new_pass">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="password" placeholder=" Confirm Password" class="form-control"
+                                            required="required" name="new_pass2">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button class="btn" id="change_pass">Upadte
+                                            Password</button>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                  <input type="text" id="password" class="inputbox" name="login"
-                                    placeholder=" New Password">
-                                </div>
-                                <div class="form-group">
-                                  <input type="text" id="password" class="inputbox" name="login"
-                                    placeholder=" Confirm Password">
-                                </div>
-                                <div class="form-group"> <input type="submit" value="update password" class="btn1">
-                                </div>
-                                <button class="modal">Close!</button>
-                              </div>
+
+                            </div>
                             </div>
                           </div>
                         </div>

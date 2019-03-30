@@ -1,14 +1,14 @@
-var student = null;
-$(document).ajaxStart(function () {
+var student_data = null;
     $("#wait").css("display", "block");
     $("#wait2").css("display", "block");
     $("#wait3").css("display", "block");
     $(".wait4").css("display", "block");
-});
+
 
 $.ajax({
     url: "users/get_student",
     success: function (student) {
+        student_data = student;
         console.log(student);
         if (student === "") {
             alert('Something went wrong, Please Login again');
@@ -87,6 +87,33 @@ $.ajax({
     }
 });
 
+$("#change_pass").click(function () {
+    var old_pass = $("input[name='old_pass']").val();
+    var new_pass = $("input[name='new_pass']").val();
+    if($(".cform input[name='old_pass']").val() != student_data.password){
+        $(".cform .alert-danger").show(); 
+    }
+    else if ($(".cform input[name='new_pass']").val() == $(".cform input[name='new_pass2']").val()) {
+        $("#change_pass").html('<i class="fa fa-circle-o-notch fa-spin"></i> Loading');
+        var dataString = 'old_pass='+ old_pass + '&new_pass=' + new_pass;
+        $.ajax({
+            type: "POST",
+            url: "users/change_password",
+            data: dataString,
+            success: function(student) { 
+                $("#change_pass").html('Upadte Password'); 
+                $(".cform .alert-success").show();
+                $(".cform .alert-warning").hide(); 
+                $(".cform .alert-danger").hide(); 
+                return true; 
+            }
+        });
+
+    } else {
+        $(".cform .alert-warning").show();
+        return false;
+    }
+})
  
 
 

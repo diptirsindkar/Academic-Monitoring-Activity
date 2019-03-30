@@ -10,7 +10,7 @@ var storage1 = multer.diskStorage({
     cb(null, 'public/img/uploads')
   },
   filename: function (req, file, cb) {
-    cb(null, req.session.staff.id+ ".jpg")
+    cb(null, req.session.staff.id + ".jpg")
   }
 })
 var storage2 = multer.diskStorage({
@@ -18,7 +18,7 @@ var storage2 = multer.diskStorage({
     cb(null, 'public/img/uploads')
   },
   filename: function (req, file, cb) {
-    cb(null, req.session.student.id+ ".jpg")
+    cb(null, req.session.student.id + ".jpg")
   }
 })
 
@@ -60,11 +60,11 @@ router.post('/sta_login', function (req, res) {
 });
 router.post('/upload_images_staff', upload_staff.single('myfile'), function (req, res) {
   console.log("file uploaded");
- res.redirect("/staff.html");
+  res.redirect("/staff.html");
 });
 router.post('/upload_images_stu', upload_stu.single('myfile'), function (req, res) {
   console.log("file uploaded");
- res.redirect("/student5.html");
+  res.redirect("/student5.html");
 });
 
 router.get('/get_student', function (req, res) {
@@ -93,10 +93,28 @@ router.post('/add_student', function (req, res) {
   insert_data(url, "ama", "student", req.body);
   console.log(req.body);
 });
+
 router.post('/add_staff', function (req, res) {
   insert_data(url, "ama", "staff", req.body);
   console.log(req.body);
   res.redirect("/dashboard.html");
+});
+
+router.post('/change_password', function (req, res) {
+  console.log(req.body);
+  if (req.session.student) { var collection = "student"; var id = req.session.student.id }
+  if (req.session.staff) { var collection = "staff"; var id = req.session.staff.id }
+
+  mongo.connect(url, function (err, db) {
+    var dbo = db.db("ama");
+    var query = { id: id };
+    var newvalues = { $set: {password: req.body.new_pass } };
+    dbo.collection(collection).updateOne(query, newvalues, function (err, result) {
+      console.log('Item updated');
+      db.close();
+    });
+  });
+  res.send(true);
 });
 
 
