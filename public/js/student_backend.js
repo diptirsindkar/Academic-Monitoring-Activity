@@ -120,8 +120,12 @@ $("#submitupdate").click(function (e) {
     $.ajax({
         type: "POST",
         url: "/add_leave",
-        data: $("#Leave .abc1 input,#Leave .abc1 select,#Leave .abc1 textarea").serialize() +  "&id=" + student_data.id,
-        success: function (result) { }
+        data: $("#Leave .abc1 input,#Leave .abc1 select,#Leave .abc1 textarea").serialize() + "&id=" + student_data.id+ "&name=" + student_data.fname,
+        success: function (result) {
+            if (result) {
+                alert("Leave apllied successfully");
+            } else { alert(student_data.fname + " You already apply for a leave"); }
+        }
     })
 })
 

@@ -535,7 +535,6 @@
               <div class="content2">
                 <div class="col-sm-12">
                   <div class="abc1">
-
                     <ul class="nav nav-pills pills">
                       <li class="active col-sm-4"><a data-toggle="pill" href="#home">Apply for leave</a></li>
                       <li class="col-sm-4"><a data-toggle="pill" href="#newleaverep">Student Leave</a></li>
@@ -569,22 +568,21 @@
                               <label>issuing authority</label>
                               <br>
                               <div class="sel">
-                                <select name="authority">
+                                <select name="to">
                                   <option value="principle">Principle</option>
                                   <option value="VP">VicePrinciple</option>
                                 </select>
                               </div>
                             </div>
                           </div>
-
                         </div>
 
                         <div class="row">
                           <div class="col-md-12">
                             <div class="form-group">
                               <label>REASON</label>
-                              <textarea rows="5" class="form-control" placeholder="Here can be your description"
-                                value="Mike"></textarea>
+                              <textarea rows="5" class="form-control"
+                                placeholder="Here can be your description" name="reason"></textarea>
                             </div>
                           </div>
                         </div>
@@ -593,22 +591,20 @@
                           <div class="col-md-4">
                             <div class="form-group">
                               <label> starting date</label>
-                              <input type="text" class="form-control" id="date">
-
-
+                              <input type="text" class="form-control" id="date" name="start_date">
                             </div>
                           </div>
-
                           <div class="col-md-4">
                             <div class="form-group">
                               <label>ending date</label>
-                              <input type="text" class="form-control" id="date1">
-
+                              <input type="text" class="form-control" id="date1" name="end_date">
                             </div>
                           </div>
                         </div>
+
                         <div class="row">
-                          <button type="submit" class="btn btn-fill pull-right">send</button></div>
+                          <button type="submit" id="submitupdate" class="btn btn-fill pull-right">send</button>
+                        </div>
 
                       </form>
                     </div>
@@ -696,6 +692,7 @@
             <div id="timetable" class="tab-pane fade">
               <div class="content6">
                 <div class="col-sm-12">
+                  <div class="notificati leave tt"></div>
                   <div class="abc1">
                     <div class="row">
                       <div class="col-sm-8">

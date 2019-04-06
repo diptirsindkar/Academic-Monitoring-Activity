@@ -90,6 +90,35 @@ $.ajax({
 });
 
 
+$("#submitupdate").click(function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "/add_leave_staff",
+        data: $("#Leave .abc1 input,#Leave .abc1 select,#Leave .abc1 textarea").serialize() + "&id=" + staff_data.id + "&name=" + staff_data.fname,
+        success: function (result) {
+            if (result) {
+                alert("Leave apllied successfully");
+            } else { alert(staff_data.fname + " You already apply for a leave"); }
+
+        }
+    })
+})
+
+$.ajax({
+    url: "/get_leave_staff",
+    success: function (leave) {
+        console.log(leave);
+        for (let i = 0; i < leave.length; i++) {
+            var leave_str = `<div class="alert alert-info">
+            Lectures of <b>${leave[i].name}</b> is free from <b>${leave[i].start_date}</b> to <b>${leave[i].end_date}</b>
+          </div>`;
+            $(".notificati.leave.tt").append(leave_str);
+        }
+    }
+});
+
+
 
 $("#change_pass").click(function () {
     var old_pass = $("input[name='old_pass']").val();

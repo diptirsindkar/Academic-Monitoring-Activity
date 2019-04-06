@@ -92,13 +92,68 @@ router.post('/login', function (req, res, next) {
 });
 router.post('/add_leave', function (req, res, next) {
     console.log(req.body);
-    insert_data(url, 'ama', 'leave', req.body);
+    get_data(url, 'ama', 'leave', leave, { id: req.body.id })
+    function leave(leave) {
+        if (leave.length) {
+            console.log(leave);
+            res.send(false);
+        } else {
+            insert_data(url, 'ama', 'leave', req.body);
+            res.send(true);
+        }
+    }
+
+});
+router.post('/add_leave_staff', function (req, res, next) {
+    console.log(req.body);
+    get_data(url, 'ama', 'leave_staff', leave, { id: req.body.id })
+    function leave(leave) {
+        if (leave.length) {
+            console.log(leave);
+            res.send(false);
+        } else {
+            insert_data(url, 'ama', 'leave_staff', req.body);
+            res.send(true);
+        }
+    }
 });
 router.get('/get_leave', function (req, res, next) {
-    get_data(url, 'ama', 'leave',leave,{})
-    function leave(leave){
+    get_data(url, 'ama', 'leave', leave, {})
+    function leave(leave) {
         res.send(leave);
     }
+});
+router.get('/get_leave_staff', function (req, res, next) {
+    get_data(url, 'ama', 'leave_staff', leave, {})
+    function leave(leave) {
+        res.send(leave);
+    }
+});
+router.post('/delete_leave', function (req, res, next) {
+    console.log(req.body.id);
+    mongo.connect(url, function (err, db) {
+        if (err) throw err;
+        var dbo = db.db("ama");
+        dbo.collection('leave').deleteOne({ "_id": objectId(req.body.id) }, function (err, result) {
+            if (err) throw err;
+            db.close();
+            console.log('Item deleted');
+            res.redirect("student-leave.html");
+        });
+    });
+});
+router.post('/delete_leave_staff', function (req, res, next) {
+    console.log(req.body.id);
+    mongo.connect(url, function (err, db) {
+        if (err) throw err;
+        var dbo = db.db("ama");
+        dbo.collection('leave_staff').deleteOne({ "_id": objectId(req.body.id) }, function (err, result) {
+            if (err) throw err;
+            db.close();
+            console.log('Item deleted');
+            res.redirect("student-leave.html");
+        });
+    });
 });
 
 
@@ -111,7 +166,7 @@ router.get('/logout', function (req, res, next) {
 });
 
 router.get('/get_notification', function (req, res, next) {
-    get_data(url, 'ama', 'noti',function (result){res.send(result);}, {});
+    get_data(url, 'ama', 'noti', function (result) { res.send(result); }, {});
 });
 
 router.post('/add_notification', function (req, res, next) {
@@ -126,20 +181,20 @@ router.post('/add_report', function (req, res, next) {
 
 router.get('/get_report_stu', function (req, res, next) {
     var student = req.session.student.id;
-    function report(report){
+    function report(report) {
         res.send(report);
     }
-    get_data(url, 'ama', 'report',report,{"id":student})
-    
+    get_data(url, 'ama', 'report', report, { "id": student })
+
 });
 
 router.get('/get_report_sta', function (req, res, next) {
     var staff = req.session.staff.id;
-    function report(report){
+    function report(report) {
         res.send(report);
     }
-    get_data(url, 'ama', 'report',report,{"id":staff})
-    
+    get_data(url, 'ama', 'report', report, { "id": staff })
+
 });
 
 var get_data = function (url, db_name, collection, fun, query) {
