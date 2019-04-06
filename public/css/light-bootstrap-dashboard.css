@@ -4040,5 +4040,8 @@ fieldset[disabled] .btn-neutral.active {
 .tabs input[type="radio"]:checked + label { background:  #943bea; } 
 .tabs input[type="radio"]:checked + label + .tab { display: block; }
 
-
-  
+/* timetable custom css */
+.tt-breaks{
+    text-align: center;
+    font-weight: 600;
+}
