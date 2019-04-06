@@ -90,6 +90,17 @@ router.post('/login', function (req, res, next) {
     }
     get_data(url, "mydb", "customers", login_data, {});
 });
+router.post('/add_leave', function (req, res, next) {
+    console.log(req.body);
+    insert_data(url, 'ama', 'leave', req.body);
+});
+router.get('/get_leave', function (req, res, next) {
+    get_data(url, 'ama', 'leave',leave,{})
+    function leave(leave){
+        res.send(leave);
+    }
+});
+
 
 router.get('/logout', function (req, res, next) {
     req.session.user = false;

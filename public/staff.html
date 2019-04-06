@@ -248,44 +248,44 @@
                               <div id="formContent">
                                 <!-- Tabs Titles -->
                                 <h4 style="text-transform:uppercase;padding:10px;font-weight:550;text-align: center;">
-                                    Change Your Password
+                                  Change Your Password
                                 </h4>
 
                                 <!-- Login Form -->
 
 
                                 <div class="cform body">
-                                    <div class="alert alert-success" role="alert" style="display: none" >
-                                        Password has been Changed....
-                                    </div>
-                                    <div class="alert alert-warning" role="alert" style="display: none" >
-                                        Confirm password does not matched?
-                                    </div>
-                                    <div class="alert alert-danger" role="alert" style="display: none" >
-                                        Old password seems wrong!
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" placeholder="Old password" class="form-control"
-                                            required="required" name="old_pass">
-                                    </div>
+                                  <div class="alert alert-success" role="alert" style="display: none">
+                                    Password has been Changed....
+                                  </div>
+                                  <div class="alert alert-warning" role="alert" style="display: none">
+                                    Confirm password does not matched?
+                                  </div>
+                                  <div class="alert alert-danger" role="alert" style="display: none">
+                                    Old password seems wrong!
+                                  </div>
+                                  <div class="form-group">
+                                    <input type="password" placeholder="Old password" class="form-control"
+                                      required="required" name="old_pass">
+                                  </div>
 
-                                    <div class="form-group">
-                                        <input type="password" placeholder=" New Password" class="form-control"
-                                            required="required" name="new_pass">
-                                    </div>
+                                  <div class="form-group">
+                                    <input type="password" placeholder=" New Password" class="form-control"
+                                      required="required" name="new_pass">
+                                  </div>
 
-                                    <div class="form-group">
-                                        <input type="password" placeholder=" Confirm Password" class="form-control"
-                                            required="required" name="new_pass2">
-                                    </div>
+                                  <div class="form-group">
+                                    <input type="password" placeholder=" Confirm Password" class="form-control"
+                                      required="required" name="new_pass2">
+                                  </div>
 
-                                    <div class="form-group">
-                                        <button class="btn" id="change_pass">Upadte
-                                            Password</button>
-                                    </div>
+                                  <div class="form-group">
+                                    <button class="btn" id="change_pass">Upadte
+                                      Password</button>
+                                  </div>
                                 </div>
 
-                            </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -350,7 +350,7 @@
             <!--------------------------------Add Student-------------------------->
             <div id="Addstu" class="tab-pane fade">
               <div class="content2">
-                <div class="col-sm-12" >
+                <div class="col-sm-12">
                   <div class="abc1">
                     <p class="content4">Add Student</p>
                     <form action="/users/add_student" method="POST">
@@ -538,7 +538,7 @@
 
                     <ul class="nav nav-pills pills">
                       <li class="active col-sm-4"><a data-toggle="pill" href="#home">Apply for leave</a></li>
-                      <li class="col-sm-4"><a data-toggle="pill" href="#newleaverep">New Leave Report</a></li>
+                      <li class="col-sm-4"><a data-toggle="pill" href="#newleaverep">Student Leave</a></li>
                     </ul>
                   </div>
                 </div>
@@ -615,7 +615,7 @@
                   </div>
                   <div id="newleaverep" class="col-sm-12 tab-pane fade">
                     <div class="abc1">
-                      <p class="content4">New Leave Report</p>
+                      <p class="content4">Student Leave Applications</p>
                     </div>
 
                   </div>
@@ -677,14 +677,14 @@
 
 
                         <div class="row">
-                          <button type="submit" class="btn  btn-fill pull-right">send</button></div>
-
+                          <button type="submit" class="btn  btn-fill pull-right">send</button>
+                        </div>
                       </form>
                     </div>
                   </div>
-                  <div id="newcomprep" class="col-sm-8 tab-pane fade">
+                  <div id="newleave" class="col-sm-8 tab-pane fade">
                     <div class="abc1">
-                      <p class="content4">New Complain Report</p>
+                      <p class=""></p>
                     </div>
                   </div>
 
@@ -833,7 +833,7 @@
       </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
         integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous">
-      </script>
+        </script>
 
       <script>
         jQuery(document).ready(function ($) {
@@ -912,18 +912,18 @@
         });
       </script>
 
-<!-------------------------------------complain n leave alert----------------------->
+      <!-------------------------------------complain n leave alert----------------------->
 
-<script>
-  $(document).ready(function () {
-      $('#staff_leave').submit(function () {
-          alert("Application Successfully Send");
-      });
-      $('#staff_complain').submit(function () {
-          alert("Application Successfully Send ")
-      });
-  });
-</script>
+      <script>
+        $(document).ready(function () {
+          $('#staff_leave').submit(function () {
+            alert("Application Successfully Send");
+          });
+          $('#staff_complain').submit(function () {
+            alert("Application Successfully Send ")
+          });
+        });
+      </script>
 
 
 

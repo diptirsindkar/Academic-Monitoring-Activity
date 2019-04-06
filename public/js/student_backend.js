@@ -1,8 +1,8 @@
 var student_data = null;
-    $("#wait").css("display", "block");
-    $("#wait2").css("display", "block");
-    $("#wait3").css("display", "block");
-    $(".wait4").css("display", "block");
+$("#wait").css("display", "block");
+$("#wait2").css("display", "block");
+$("#wait3").css("display", "block");
+$(".wait4").css("display", "block");
 
 
 $.ajax({
@@ -26,7 +26,7 @@ $.ajax({
         $('span[data="stu_department"]').html(student.department);
         $('span[data="stu_year"]').html(student.year);
         $('span[data="stu_profile"]').html(`<img src="img/uploads/${student.profile}" class="img-responsive center" style="border-radius: 50%;"alt="avtar"></img>`);
-    
+
 
 
         $("#wait").css("display", "none");
@@ -71,7 +71,7 @@ $.ajax({
 $.ajax({
     url: "/get_notification",
     success: function (noti) {
-        for (let i = noti.length-1; i >= 0; i--) {
+        for (let i = noti.length - 1; i >= 0; i--) {
             $("#accordion").append(`<div class="panel panel-default">
                 <div class="panel-heading">
                 <h4 class="panel-title">
@@ -90,22 +90,22 @@ $.ajax({
 $("#change_pass").click(function () {
     var old_pass = $("input[name='old_pass']").val();
     var new_pass = $("input[name='new_pass']").val();
-    if($(".cform input[name='old_pass']").val() != student_data.password){
-        $(".cform .alert-danger").show(); 
+    if ($(".cform input[name='old_pass']").val() != student_data.password) {
+        $(".cform .alert-danger").show();
     }
     else if ($(".cform input[name='new_pass']").val() == $(".cform input[name='new_pass2']").val()) {
         $("#change_pass").html('<i class="fa fa-circle-o-notch fa-spin"></i> Loading');
-        var dataString = 'old_pass='+ old_pass + '&new_pass=' + new_pass;
+        var dataString = 'old_pass=' + old_pass + '&new_pass=' + new_pass;
         $.ajax({
             type: "POST",
             url: "users/change_password",
             data: dataString,
-            success: function(student) { 
-                $("#change_pass").html('Upadte Password'); 
+            success: function (student) {
+                $("#change_pass").html('Upadte Password');
                 $(".cform .alert-success").show();
-                $(".cform .alert-warning").hide(); 
-                $(".cform .alert-danger").hide(); 
-                return true; 
+                $(".cform .alert-warning").hide();
+                $(".cform .alert-danger").hide();
+                return true;
             }
         });
 
@@ -114,8 +114,16 @@ $("#change_pass").click(function () {
         return false;
     }
 })
- 
 
+$("#submitupdate").click(function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "/add_leave",
+        data: $("#Leave .abc1 input,#Leave .abc1 select,#Leave .abc1 textarea").serialize() +  "&id=" + student_data.id,
+        success: function (result) { }
+    })
+})
 
 
 

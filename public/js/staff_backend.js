@@ -73,6 +73,21 @@ $.ajax({
     }
 });
 
+$.ajax({
+    url: "/get_leave",
+    success: function (leave) {
+        console.log(leave);
+        for (let i = 0; i < leave.length; i++) {
+            var leave_str = `<ul class="bg-light text-dark">
+            <li><b>From</b>: ${leave[i].id}</li>
+        <li><b>To</b>: ${leave[i].to}</li>
+        <li><b>Reason</b>: ${leave[i].reason}</li>
+        <li>Leave from <b>${leave[i].start_date}</b> to <b>${leave[i].end_date}</b></li>
+      </ul>   `;
+            $("#newleaverep .abc1").append(leave_str);
+        }
+    }
+});
 
 
 
